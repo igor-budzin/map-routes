@@ -43,11 +43,12 @@ module.exports = {
 					{loader: 'style-loader'},
 					{loader: 'css-loader'}
 				]
+			},
+			{
+				test: /\.(gif|png|jpg|jpeg|svg)$/,
+				use: 'url-loader'
 			}
 		]
-	},
-	resolve: {
-		extensions: ['*', '.js', '.jsx', 'scss', 'less']
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

@@ -1,6 +1,8 @@
 import React from 'react';
 
-import './assets/styles/main.css'
+import Sidebar from './sidebar';
+
+import './assets/styles/main.scss';
 
 export default class App extends React.Component {
 	// static propTypes = {
@@ -24,10 +26,7 @@ export default class App extends React.Component {
 						<a href="#">item 5</a>
 					</nav>
 				</header>
-				<aside>
-					<input type="text" className="field-from" placeholder="from" />
-					<input type="text" className="field-to" placeholder="to" />
-				</aside>
+				<Sidebar />
 			</React.Fragment>
 		);
 	}

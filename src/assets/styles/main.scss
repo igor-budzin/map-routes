@@ -1,0 +1,97 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	background-color: #f4f6f9;
+}
+header {
+	height: 50px;
+	background-color: #fff;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+header .logo {
+	flex-grow: 1;
+	flex: 0 300px;
+	line-height: 50px;
+	text-align: center;
+}
+header nav {
+	flex: 1 auto;
+	line-height: 50px;
+}
+header nav a {
+	margin-right: 25px;
+}
+aside {
+	width: 400px;
+	background-color: #fff;
+	padding: 20px 15px;
+	margin: 15px 0 0 15px;
+	position: relative;
+	& input {
+		width: 100%;
+		border: 1px solid #ddd;
+		height: 40px;
+		border-radius: 3px;
+		outline: none;
+		padding: 10px;
+		font-size: 16px;
+		color: #333;
+		transition: border 200ms ease;
+		&:focus {
+			border-color: #44A4FF;
+		}
+	}
+	.autocomplete {
+		position: absolute;
+		top: 61px;
+		width: 370px;
+	}
+}
+.autocomplete {
+	border: 1px solid #d0d0d0;
+	border-radius: 3px;
+	box-shadow: 3px 5px 20px 1px rgba(0, 0, 0, 0.04);
+	background-color: #fff;
+	width: 100%;
+	display: none;
+	&.visible {
+		display: block;
+	}
+	.item {
+		height: 50px;
+		border-bottom: 1px solid #e2e2e2;
+		cursor: pointer;
+		padding: 7px 15px;
+		line-height: 18px;
+		padding-left: 50px;
+		background-image: url('../img/map-marker.png');
+		background-position: left 13px center;
+		background-repeat: no-repeat;
+		&:last-child {
+			border-bottom: 0;
+		}
+		&:hover {
+			background-color: #f3f9ff;
+		}
+		&:active {
+			background-color: #e9f3fd;
+		}
+
+		.main-text {
+			font-size: 16px;
+			color: #333;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden; 
+		}
+		.secondary-text {
+			font-size: 13px;
+			color: #929292;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden; 
+		}
+	}
+}
