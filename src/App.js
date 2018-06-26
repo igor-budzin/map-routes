@@ -19,11 +19,9 @@ export default class App extends React.Component {
 				<header>
 					<div className="logo">Logotype</div>
 					<nav>
-						<a href="#">item 1</a>
-						<a href="#">item 2</a>
-						<a href="#">item 3</a>
-						<a href="#">item 4</a>
-						<a href="#">item 5</a>
+						<a href="#">Routes</a>
+						<a href="#">About App</a>
+						
 					</nav>
 				</header>
 				<Sidebar />

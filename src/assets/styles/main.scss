@@ -2,6 +2,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	background-color: #f4f6f9;
+	background-image: url('../img/bg.jpg');
 }
 header {
 	height: 50px;
@@ -29,6 +30,7 @@ aside {
 	padding: 20px 15px;
 	margin: 15px 0 0 15px;
 	position: relative;
+	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
 	& input {
 		width: 100%;
 		border: 1px solid #ddd;
@@ -55,10 +57,7 @@ aside {
 	box-shadow: 3px 5px 20px 1px rgba(0, 0, 0, 0.04);
 	background-color: #fff;
 	width: 100%;
-	display: none;
-	&.visible {
-		display: block;
-	}
+	z-index: 2;
 	.item {
 		height: 50px;
 		border-bottom: 1px solid #e2e2e2;
@@ -74,6 +73,47 @@ aside {
 		}
 		&:hover {
 			background-color: #f3f9ff;
+		}
+		&:active {
+			background-color: #e9f3fd;
+		}
+
+		.main-text {
+			font-size: 16px;
+			color: #333;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden; 
+		}
+		.secondary-text {
+			font-size: 13px;
+			color: #929292;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden; 
+		}
+	}
+}
+
+section {
+	width: 400px;
+	background-color: #fff;
+	padding: 20px 15px;
+	margin: 15px 0 0 15px;
+	position: relative;
+	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
+	.item {
+		height: 50px;
+		cursor: pointer;
+		padding: 7px 15px;
+		line-height: 18px;
+		padding-left: 50px;
+		background-image: url('../img/map-marker.png');
+		background-position: left 13px center;
+		background-repeat: no-repeat;
+		&:hover {
+			background-color: #f3f9ff;
+			background-image: url('../img/drag.png');
 		}
 		&:active {
 			background-color: #e9f3fd;
