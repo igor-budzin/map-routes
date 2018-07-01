@@ -3,6 +3,7 @@ import axios from 'axios';
 // import { SortableContainer } from 'react-anything-sortable';
 
 import Autocomplete from './autocomplete';
+import GoogleMapAPI from './lib/GoogleMapAPI';
 
 // import 'react-anything-sortable/sortable.css';
 
@@ -10,34 +11,23 @@ export default class Sidebar extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.service = new google.maps.places.AutocompleteService();
+
 		this.state = {
 			inputText: '',
 			autocompleteArray: [],
 			routeItems: []
 		};
 	}
-	
+
 	onChange = (event) => {
 		this.setState({inputText: event.target.value});
 		const _this = this;
-		if(this.state.inputText.length >= 2) {
-			axios.get('https:\/\/maps.googleapis.com/maps/api/place/autocomplete/json', {
-				params: {
-					key: 'AIzaSyBAqxeV5q5jSCVZQatbpJ33MYWHcBg7jK0',
-					language: 'uk',
-					types: 'geocode',
-					input: this.state.inputText
-				}
-			})
-			.then(function (response) {
-				if(response.data.status === 'OK') {
-					_this.setState({autocompleteArray: response.data.predictions})
-					// console.dir(response);
-				}
-				
-			})
-			.catch(function (error) {
-				console.log(error);
+		if(this.state.inputText.length >= 2 && google.maps.places.PlacesServiceStatus.OK) {
+			this.service.getQueryPredictions({ input: this.state.inputText }, (response, status) => {
+				console.log(response);
+				console.log(status);
+				_this.setState({autocompleteArray: response})
 			});
 		}
 		else if(event.target.value.length === 0) {
@@ -55,10 +45,11 @@ export default class Sidebar extends React.Component {
 	}
 
 	buildRoute = () => {
-		
+
 	}
 
 	render() {
+		console.log(GoogleMapAPI);
 		return (
 			<React.Fragment>
 				<aside>
