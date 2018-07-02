@@ -12,8 +12,6 @@ export default class Sidebar extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.service = new google.maps.places.AutocompleteService();
-
 		this.state = {
 			inputText: '',
 			autocompleteArray: [],
@@ -24,10 +22,8 @@ export default class Sidebar extends React.Component {
 	onChange = (event) => {
 		this.setState({inputText: event.target.value});
 		const _this = this;
-		if(this.state.inputText.length >= 2 && google.maps.places.PlacesServiceStatus.OK) {
-			this.service.getQueryPredictions({ input: this.state.inputText }, (response, status) => {
-				console.log(response);
-				console.log(status);
+		if(this.state.inputText.length >= 2) {
+			GoogleMapAPI.getPlaceFromQuery(this.state.inputText, (response, status) => {
 				_this.setState({autocompleteArray: response})
 			});
 		}
@@ -50,7 +46,6 @@ export default class Sidebar extends React.Component {
 	}
 
 	render() {
-		console.log(GoogleMapAPI.getPlaceFromQuery());
 		return (
 			<React.Fragment>
 				<aside>

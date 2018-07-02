@@ -1,17 +1,19 @@
 export default class GoogleMapAPI {
 	constructor() {
-		console.log("GoogleMapAPI -------------");
 		if(window.google === undefined) {
 			throw new Error('Google maps API not supported');
 		}
 
+		this.autocompleteService = new google.maps.places.AutocompleteService();
+		this.placesServiceStatusOK = google.maps.places.PlacesServiceStatus.OK;
 	}
 
-	init() {
-		console.log("Hello");
-	}
-
-	getPlaceFromQuery(query) {
-		console.log('End')
+	getPlaceFromQuery(query, callback) {
+		if(this.placesServiceStatusOK) {
+			return this.autocompleteService.getQueryPredictions({input: query}, callback);
+		}
+		else {
+			throw new Error('PlacesServiceStatus: error');
+		}
 	}
 }
