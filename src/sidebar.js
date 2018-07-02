@@ -3,7 +3,8 @@ import axios from 'axios';
 // import { SortableContainer } from 'react-anything-sortable';
 
 import Autocomplete from './autocomplete';
-import GoogleMapAPI from './lib/GoogleMapAPI';
+import Google from './lib/GoogleMapAPI';
+const GoogleMapAPI = new Google();
 
 // import 'react-anything-sortable/sortable.css';
 
@@ -49,7 +50,7 @@ export default class Sidebar extends React.Component {
 	}
 
 	render() {
-		console.log(GoogleMapAPI);
+		console.log(GoogleMapAPI.getPlaceFromQuery());
 		return (
 			<React.Fragment>
 				<aside>
