@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Sidebar from './sidebar';
+import GoogleMap from './GoogleMapContainer';
 
 import './assets/styles/main.scss';
 
@@ -24,6 +25,7 @@ export default class App extends React.Component {
 						
 					</nav>
 				</header>
+				<GoogleMap />
 				<Sidebar />
 			</React.Fragment>
 		);

@@ -2,14 +2,19 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	background-color: #f4f6f9;
-	background-image: url('../img/bg.jpg');
 }
 header {
 	height: 50px;
 	background-color: #fff;
+	position: absolute;
+	top: 0;
 	display: flex;
 	flex-flow: row wrap;
 	width: 100%;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	overflow: hidden;
 }
 header .logo {
 	flex-grow: 1;
@@ -28,8 +33,9 @@ aside {
 	width: 400px;
 	background-color: #fff;
 	padding: 20px 15px;
-	margin: 15px 0 0 15px;
-	position: relative;
+	position: absolute;
+	top: 66px;
+	left: 15px;
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
 	& input {
 		width: 100%;
@@ -99,8 +105,9 @@ section {
 	width: 400px;
 	background-color: #fff;
 	padding: 20px 15px;
-	margin: 15px 0 0 15px;
-	position: relative;
+	position: absolute;
+	top: 162px;
+	left: 15px;
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
 	.item {
 		height: 50px;

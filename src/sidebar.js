@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-// import { SortableContainer } from 'react-anything-sortable';
 
 import Autocomplete from './autocomplete';
-import Google from './lib/GoogleMapAPI';
-const GoogleMapAPI = new Google();
+import RouteList from './RouteList'
 
-// import 'react-anything-sortable/sortable.css';
+import Google from './lib/GoogleMapAPI';
+
+const GoogleMapAPI = new Google();
 
 export default class Sidebar extends React.Component {
 	constructor(props) {
@@ -22,9 +22,14 @@ export default class Sidebar extends React.Component {
 	onChange = (event) => {
 		this.setState({inputText: event.target.value});
 		const _this = this;
-		if(this.state.inputText.length >= 2) {
+		if(this.state.inputText.length >= 1) {
 			GoogleMapAPI.getPlaceFromQuery(this.state.inputText, (response, status) => {
-				_this.setState({autocompleteArray: response})
+				if(Array.isArray(response)) {
+					_this.setState({autocompleteArray: response});
+				}
+				else {
+					this.setState({autocompleteArray: []});
+				}
 			});
 		}
 		else if(event.target.value.length === 0) {
@@ -38,11 +43,6 @@ export default class Sidebar extends React.Component {
 		const tmp = this.state.routeItems;
 		tmp.push(item);
 		this.setState({routeItems: tmp});
-		this.buildRoute();
-	}
-
-	buildRoute = () => {
-
 	}
 
 	render() {
@@ -52,19 +52,7 @@ export default class Sidebar extends React.Component {
 					<input ref={(node) => {this.fieldFrom = node}} type="text" className="field-from" placeholder="Place" onChange={this.onChange} />
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
-
-				<section>
-					{
-						this.state.routeItems.map((item) => {
-							return (
-								<div className="item" key={item.id}>
-									<div className="main-text">{item.main_text}</div>
-									<div className="secondary-text">{item.secondary_text}</div>
-								</div>
-							)
-						})
-					}
-				</section>
+				{this.state.routeItems.length > 0 ? <RouteList routeItems={this.state.routeItems} /> : ''}
 			</React.Fragment>
 		);
 	}
