@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Sidebar from './sidebar';
-import GoogleMap from './GoogleMapContainer';
+import GoogleMap from './GoogleMap';
 
 import './assets/styles/main.scss';
 

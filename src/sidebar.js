@@ -4,10 +4,6 @@ import axios from 'axios';
 import Autocomplete from './autocomplete';
 import RouteList from './RouteList'
 
-import Google from './lib/GoogleMapAPI';
-
-const GoogleMapAPI = new Google();
-
 export default class Sidebar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -17,13 +13,15 @@ export default class Sidebar extends React.Component {
 			autocompleteArray: [],
 			routeItems: []
 		};
+
+		this.autocompleteService = new google.maps.places.AutocompleteService();
 	}
 
 	onChange = (event) => {
 		this.setState({inputText: event.target.value});
 		const _this = this;
 		if(this.state.inputText.length >= 1) {
-			GoogleMapAPI.getPlaceFromQuery(this.state.inputText, (response, status) => {
+			this.autocompleteService.getQueryPredictions({input: this.state.inputText}, (response) => {
 				if(Array.isArray(response)) {
 					_this.setState({autocompleteArray: response});
 				}
