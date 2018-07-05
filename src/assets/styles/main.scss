@@ -109,6 +109,13 @@ section {
 	top: 162px;
 	left: 15px;
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
+	.empty-message {
+		font-size: 24px;
+		display: block;
+		text-align: center;
+		margin: 15px 0;
+		color: #6c6c6c;
+	}
 	.item {
 		height: 50px;
 		cursor: pointer;

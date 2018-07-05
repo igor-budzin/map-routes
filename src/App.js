@@ -7,11 +7,19 @@ import './assets/styles/main.scss';
 
 export default class App extends React.Component {
 	// static propTypes = {
-	// 	name: React.PropTypes.string,
+	// 	routeItems: React.PropTypes.array,
 	// };
 
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			routeItems: []
+		}
+	}
+
+	getRouteItems = (routeItems) => {
+		this.setState({routeItems: routeItems});
 	}
 
 	render() {
@@ -22,11 +30,10 @@ export default class App extends React.Component {
 					<nav>
 						<a href="#">Routes</a>
 						<a href="#">About App</a>
-						
 					</nav>
 				</header>
-				<GoogleMap />
-				<Sidebar />
+				<GoogleMap routeItems={this.state.routeItems} />
+				<Sidebar getRouteItems={this.getRouteItems} />
 			</React.Fragment>
 		);
 	}

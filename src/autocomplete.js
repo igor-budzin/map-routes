@@ -21,7 +21,7 @@ export default class Autocomplete extends React.Component {
 			{
 				this.props.autocompleteArray.map((item) => {
 					return (
-						<div className="item" key={item.id} data-id={item.id} onClick={this.onClick}>
+						<div className="item" key={item.id} data-id={item.place_id} onClick={this.onClick}>
 							<div className="main-text">{item.structured_formatting.main_text}</div>
 							<div className="secondary-text">{item.structured_formatting.secondary_text}</div>
 						</div>

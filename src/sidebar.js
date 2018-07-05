@@ -23,6 +23,7 @@ export default class Sidebar extends React.Component {
 		if(this.state.inputText.length >= 1) {
 			this.autocompleteService.getQueryPredictions({input: this.state.inputText}, (response) => {
 				if(Array.isArray(response)) {
+					console.log(response)
 					_this.setState({autocompleteArray: response});
 				}
 				else {
@@ -38,9 +39,10 @@ export default class Sidebar extends React.Component {
 	handlePickAutocomplete = (item) => {
 		this.fieldFrom.value = '';
 		this.setState({autocompleteArray: []});
-		const tmp = this.state.routeItems;
-		tmp.push(item);
-		this.setState({routeItems: tmp});
+		const tmpRouteItemsArray = this.state.routeItems;
+		tmpRouteItemsArray.push(item);
+		this.setState({routeItems: tmpRouteItemsArray});
+		this.props.getRouteItems(tmpRouteItemsArray);
 	}
 
 	render() {
@@ -50,7 +52,7 @@ export default class Sidebar extends React.Component {
 					<input ref={(node) => {this.fieldFrom = node}} type="text" className="field-from" placeholder="Place" onChange={this.onChange} />
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
-				{this.state.routeItems.length > 0 ? <RouteList routeItems={this.state.routeItems} /> : ''}
+				<RouteList routeItems={this.state.routeItems} />
 			</React.Fragment>
 		);
 	}
