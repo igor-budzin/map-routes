@@ -23,7 +23,7 @@ export default class Sidebar extends React.Component {
 		if(this.state.inputText.length >= 1) {
 			this.autocompleteService.getQueryPredictions({input: this.state.inputText}, (response) => {
 				if(Array.isArray(response)) {
-					console.log(response)
+					// console.log(response)
 					_this.setState({autocompleteArray: response});
 				}
 				else {
@@ -39,10 +39,20 @@ export default class Sidebar extends React.Component {
 	handlePickAutocomplete = (item) => {
 		this.fieldFrom.value = '';
 		this.setState({autocompleteArray: []});
-		const tmpRouteItemsArray = this.state.routeItems;
-		tmpRouteItemsArray.push(item);
-		this.setState({routeItems: tmpRouteItemsArray});
-		this.props.getRouteItems(tmpRouteItemsArray);
+
+		const placesService = new google.maps.places.PlacesService(document.getElementById('map2'));
+
+		placesService.getDetails({placeId: item.id}, (place, status) => {
+			if(status == google.maps.places.PlacesServiceStatus.OK) {
+				item.lat = place.geometry.location.lat();
+				item.lng = place.geometry.location.lng();
+				const tmpRouteItemsArray = this.state.routeItems;
+				tmpRouteItemsArray.push(item);
+				this.setState({routeItems: tmpRouteItemsArray});
+				this.props.getRouteItems(tmpRouteItemsArray);
+			}
+			else throw new Error('Get coordinate: something went wrong');
+		});
 	}
 
 	render() {

@@ -6,6 +6,7 @@ const iconMarker = require('./assets/img/marker.svg');
 export default class GoogleMap extends React.Component {
 	constructor(props) {
 		super(props);
+		const _this  = this;
 	}
 
 	calculateAndDisplayRoute(directionsDisplay, directionsService, stepDisplay, map) {
@@ -13,9 +14,6 @@ export default class GoogleMap extends React.Component {
 	  // for (var i = 0; i < markerArray.length; i++) {
 	  //   markerArray[i].setMap(null);
 	  // }
-
-	  // Retrieve the start and end locations and create a DirectionsRequest using
-	  // WALKING directions.
 
 	}
 
@@ -30,38 +28,45 @@ export default class GoogleMap extends React.Component {
 	}
 
 	componentDidUpdate() {
-		const placesService = new google.maps.places.PlacesService(this.map);
+		// const placesService = new google.maps.places.PlacesService(this.map);
+
 		if(this.props.routeItems.length === 1) {
-			
-			placesService.getDetails({placeId: this.props.routeItems[0].id}, (place, status) => {
-				if(status == google.maps.places.PlacesServiceStatus.OK) {
-					const marker = new google.maps.Marker({
-						map: this.map,
-						position: place.geometry.location,
-						icon: iconMarker,
-						animation: google.maps.Animation.DROP
-					});
-				}
+			const marker = new google.maps.Marker({
+				map: this.map,
+				position: new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng),
+				icon: iconMarker,
+				animation: google.maps.Animation.DROP
 			});
+			this.map.panTo(new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng));
+
+
 		}
 		else if(this.props.routeItems.length >= 1) {
-			const placesService = new google.maps.places.PlacesService(this.map);
 			const directionsService = new google.maps.DirectionsService;
 			const directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
 
-			placesService.getDetails({placeId: this.props.routeItems[1].id}, (place, status) => {
-				if(status == google.maps.places.PlacesServiceStatus.OK) {
-					console.log(place.geometry.location.lat())
+			let waypts = [];
+			this.props.routeItems.forEach((item, index) => {
+				if(index !== 0 && index !== this.props.routeItems.length - 1) {
+					waypts.push({
+						location: new google.maps.LatLng(item.lat, item.lng),
+						stopover: true
+					});
+					console.log()
 				}
 			});
 
+
 			directionsService.route({
-			  origin: new google.maps.LatLng(40.84, 14.25),
-			  destination: new google.maps.LatLng(49.83, 24.00),
-			  travelMode: google.maps.DirectionsTravelMode.DRIVING
+				origin: new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng),
+				destination: new google.maps.LatLng(this.props.routeItems[this.props.routeItems.length - 1].lat, this.props.routeItems[this.props.routeItems.length - 1].lng),
+				travelMode: google.maps.DirectionsTravelMode.DRIVING,
+				waypoints: waypts
 			}, (response, status) => {
-				// console.log(response);
+				console.log(response);
 				if(status === 'OK') {
+					 directionsDisplay.setDirections(response);
+					// console.log(response)
 					// For each step, place a marker, and add the text to the marker's infowindow.
 					 // Also attach the marker to an array so we can keep track of it and remove it
 					 // when calculating new routes.
@@ -79,7 +84,10 @@ export default class GoogleMap extends React.Component {
 
 	render() {
 		return(
-			<div id="map"></div>
+			<React.Fragment>
+				<div id="map"></div>
+				<div id="map2"></div>
+			</React.Fragment>
 		);
 	}
 }
