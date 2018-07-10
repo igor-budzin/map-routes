@@ -8,6 +8,7 @@ const List = (props) => {
 					<div className="item" key={item.id + i} data-id={item.id}>
 						<div className="main-text">{item.main_text}</div>
 						<div className="secondary-text">{item.secondary_text}</div>
+						<a href="#" className="remove-btn"></a>
 					</div>
 				);
 			})

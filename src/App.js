@@ -14,12 +14,17 @@ export default class App extends React.Component {
 		super(props);
 
 		this.state = {
-			routeItems: []
+			routeItems: [],
+			routeVisibleType: 'route'
 		}
 	}
 
 	getRouteItems = (routeItems) => {
 		this.setState({routeItems: routeItems});
+	}
+
+	onChangeType = (type) => {
+		this.setState({routeVisibleType: type});
 	}
 
 	render() {
@@ -28,12 +33,19 @@ export default class App extends React.Component {
 				<header>
 					<div className="logo">Logotype</div>
 					<nav>
-						<a href="#">Routes</a>
+						<a href="#">Create Route</a>
+						<a href="#">Saved Routes</a>
 						<a href="#">About App</a>
 					</nav>
 				</header>
-				<GoogleMap routeItems={this.state.routeItems} />
-				<Sidebar getRouteItems={this.getRouteItems} />
+				<GoogleMap
+					routeItems={this.state.routeItems}
+					routeVisibleType={this.state.routeVisibleType}
+				/>
+				<Sidebar
+					getRouteItems={this.getRouteItems}
+					onChangeType={this.onChangeType}
+				/>
 			</React.Fragment>
 		);
 	}

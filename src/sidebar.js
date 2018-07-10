@@ -11,7 +11,8 @@ export default class Sidebar extends React.Component {
 		this.state = {
 			inputText: '',
 			autocompleteArray: [],
-			routeItems: []
+			routeItems: [],
+			checked: false
 		};
 
 		this.autocompleteService = new google.maps.places.AutocompleteService();
@@ -23,7 +24,6 @@ export default class Sidebar extends React.Component {
 		if(this.state.inputText.length >= 1) {
 			this.autocompleteService.getQueryPredictions({input: this.state.inputText}, (response) => {
 				if(Array.isArray(response)) {
-					// console.log(response)
 					_this.setState({autocompleteArray: response});
 				}
 				else {
@@ -55,11 +55,36 @@ export default class Sidebar extends React.Component {
 		});
 	}
 
+	onChangeType = (event) => {
+		this.setState({checked: !this.state.checked}, () => {
+			this.props.onChangeType(this.state.checked ? 'marker' : 'route');
+		});
+		
+	}
+
 	render() {
 		return (
 			<React.Fragment>
 				<aside>
 					<input ref={(node) => {this.fieldFrom = node}} type="text" className="field-from" placeholder="Place" onChange={this.onChange} />
+
+					<div className="checkbox-wrapper">
+						<label htmlFor="checkbox" className="left-label">Route</label>
+						<input
+							onChange={this.onChangeType}
+							checked={this.state.checked}
+							type="checkbox"
+							className="switcher"
+							id="checkbox"
+						/>
+						<label htmlFor="checkbox">Markers</label>
+					</div>
+
+					<label className="checkbox-wrapper default theme">Light theme
+						<input type="checkbox" />
+						<span className="checkmark"></span>
+					</label>
+
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
 				<RouteList routeItems={this.state.routeItems} />

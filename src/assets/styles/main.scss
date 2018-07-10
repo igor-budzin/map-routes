@@ -32,12 +32,12 @@ header nav a {
 aside {
 	width: 400px;
 	background-color: #fff;
-	padding: 20px 15px;
+	padding: 15px;
 	position: absolute;
 	top: 66px;
 	left: 15px;
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
-	& input {
+	& input[type=text] {
 		width: 100%;
 		border: 1px solid #ddd;
 		height: 40px;
@@ -104,9 +104,9 @@ aside {
 section {
 	width: 400px;
 	background-color: #fff;
-	padding: 20px 15px;
+	padding: 15px;
 	position: absolute;
-	top: 162px;
+	top: 190px;
 	left: 15px;
 	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.55);
 	.empty-message {
@@ -125,6 +125,7 @@ section {
 		background-image: url('../img/map-marker.png');
 		background-position: left 13px center;
 		background-repeat: no-repeat;
+		position: relative;
 		&:hover {
 			background-color: #f3f9ff;
 			background-image: url('../img/drag.png');
@@ -132,7 +133,29 @@ section {
 		&:active {
 			background-color: #e9f3fd;
 		}
+		&:hover .remove-btn {
+			display: block;
+			&:hover {
+				background-color: #daeafb;
+			}
+			&:active {
+				background-color: #c9e0f9;
+			}
+		}
 
+		.remove-btn {
+			display: none;
+			width: 50px;
+			height: 50px;
+			background-color: #e8f3ff;
+			background-image: url('../img/delete.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 0;
+			top: 0;
+			cursor: pointer;
+		}
 		.main-text {
 			font-size: 16px;
 			color: #333;
@@ -153,4 +176,114 @@ section {
 #map {
 	width: 100vw;
 	height: 100vh;
+}
+input[type="checkbox"].switcher {
+	position: absolute;
+	width: 0;
+}
+input[type="checkbox"].switcher + label {
+	position: relative;
+	padding: 5px 0 0 50px;
+	line-height: 15px;
+}
+input[type="checkbox"].switcher + label:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 40px; /* x*5 */
+	height: 24px; /* x*3 */
+	border-radius: 16px; /* x*2 */
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+input[type="checkbox"].switcher + label:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	width: 24px; /* x*3 */
+	height: 24px; /* x*3 */
+	border-radius: 16px; /* x*2 */
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+input[type="checkbox"].switcher + label:hover:after {
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+input[type="checkbox"].switcher:checked + label:after {
+	margin-left: 16px;
+}
+input[type="checkbox"].switcher:checked + label:before {
+	background: #44A4FF;
+}
+.checkbox-wrapper {
+	height: 24px;
+	margin: 15px 0 0 0;
+	display: inline-block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+	float: left;
+}
+.checkbox-wrapper label {
+	cursor: pointer;
+}
+.checkbox-wrapper .left-label {
+	margin-right: 10px;
+}
+.checkbox-wrapper.default {
+	display: block;
+	padding-left: 30px;
+	cursor: pointer;
+}
+.checkbox-wrapper.theme {
+	float: right;
+}
+.checkbox-wrapper.default input[type=checkbox] {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-color: #eee;
+}
+.checkbox-wrapper.default:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.checkbox-wrapper.default input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkbox-wrapper.default input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkbox-wrapper.default .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }

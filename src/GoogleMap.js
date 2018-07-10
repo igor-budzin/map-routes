@@ -6,15 +6,9 @@ const iconMarker = require('./assets/img/marker.svg');
 export default class GoogleMap extends React.Component {
 	constructor(props) {
 		super(props);
-		const _this  = this;
-	}
 
-	calculateAndDisplayRoute(directionsDisplay, directionsService, stepDisplay, map) {
-	  // First, remove any existing markers from the map.
-	  // for (var i = 0; i < markerArray.length; i++) {
-	  //   markerArray[i].setMap(null);
-	  // }
-
+		this.directionsService = new google.maps.DirectionsService;
+		this.directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
 	}
 
 	componentDidMount() {
@@ -27,58 +21,56 @@ export default class GoogleMap extends React.Component {
 		});
 	}
 
-	componentDidUpdate() {
-		// const placesService = new google.maps.places.PlacesService(this.map);
+	buildRoute() {
+		let waypts = [];
+		this.props.routeItems.forEach((item, index) => {
+			if(index !== 0 && index !== this.props.routeItems.length - 1) {
+				waypts.push({
+					location: new google.maps.LatLng(item.lat, item.lng)
+				});
+			}
+		});
 
-		if(this.props.routeItems.length === 1) {
+		this.directionsService.route({
+			origin: new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng),
+			destination: new google.maps.LatLng(this.props.routeItems[this.props.routeItems.length - 1].lat, this.props.routeItems[this.props.routeItems.length - 1].lng),
+			travelMode: google.maps.DirectionsTravelMode.DRIVING,
+			waypoints: waypts
+		}, (response, status) => {
+			if(status === 'OK') {
+				console.log("44444")
+				this.directionsDisplay.setDirections(response);
+			}
+		});
+	}
+
+	setMarkers() {
+		this.props.routeItems.forEach((item) => {
 			const marker = new google.maps.Marker({
 				map: this.map,
-				position: new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng),
+				position: new google.maps.LatLng(item.lat, item.lng),
 				icon: iconMarker,
 				animation: google.maps.Animation.DROP
 			});
-			this.map.panTo(new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng));
+		});	
+	}
 
+	componentDidUpdate() {
+		this.directionsDisplay.setDirections({routes: []});
 
+		if(this.props.routeItems.length === 1) {
+			this.setMarkers();
+			console.log('111')
 		}
 		else if(this.props.routeItems.length >= 1) {
-			const directionsService = new google.maps.DirectionsService;
-			const directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
-
-			let waypts = [];
-			this.props.routeItems.forEach((item, index) => {
-				if(index !== 0 && index !== this.props.routeItems.length - 1) {
-					waypts.push({
-						location: new google.maps.LatLng(item.lat, item.lng),
-						stopover: true
-					});
-					console.log()
-				}
-			});
-
-
-			directionsService.route({
-				origin: new google.maps.LatLng(this.props.routeItems[0].lat, this.props.routeItems[0].lng),
-				destination: new google.maps.LatLng(this.props.routeItems[this.props.routeItems.length - 1].lat, this.props.routeItems[this.props.routeItems.length - 1].lng),
-				travelMode: google.maps.DirectionsTravelMode.DRIVING,
-				waypoints: waypts
-			}, (response, status) => {
-				console.log(response);
-				if(status === 'OK') {
-					 directionsDisplay.setDirections(response);
-					// console.log(response)
-					// For each step, place a marker, and add the text to the marker's infowindow.
-					 // Also attach the marker to an array so we can keep track of it and remove it
-					 // when calculating new routes.
-					 // var myRoute = directionResult.routes[0].legs[0];
-					 // for (var i = 0; i < myRoute.steps.length; i++) {
-					 //   var marker = markerArray[i] = markerArray[i] || new google.maps.Marker;
-					 //   marker.setMap(map);
-					 //   marker.setPosition(myRoute.steps[i].start_location);
-					// }
-				}
-			});
-
+			if(this.props.routeVisibleType === 'route') {
+				this.buildRoute();
+				console.log('222')
+			}
+			else if(this.props.routeVisibleType === 'marker') {
+				this.setMarkers();
+				console.log('3333')
+			}
 		}
 	}
 
