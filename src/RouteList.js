@@ -1,17 +1,27 @@
 import React from 'react';
+import {Button} from 'antd';
+
+import 'antd/lib/button/style';
 
 const List = (props) => {
 	if(props.routeItems.length > 0) {
+		let list = props.routeItems.map((item, i) => {
+			return (
+				<div className="item" key={item.id + i} data-id={item.id}>
+					<div className="main-text">{item.main_text}</div>
+					<div className="secondary-text">{item.secondary_text}</div>
+					<a onClick={() => props.onDeleteRouteItem(item.id)} href="#" className="remove-btn"></a>
+				</div>
+			);
+		});
+
 		return (
-			props.routeItems.map((item, i) => {
-				return (
-					<div className="item" key={item.id + i} data-id={item.id}>
-						<div className="main-text">{item.main_text}</div>
-						<div className="secondary-text">{item.secondary_text}</div>
-						<a href="#" className="remove-btn"></a>
-					</div>
-				);
-			})
+			<React.Fragment>
+				<div className="route-list">
+					{list}
+				</div>
+				<Button className="save-btn" type="primary">Save</Button>
+			</React.Fragment>
 		);
 	}
 	else {
@@ -23,6 +33,10 @@ export default class RouteList extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+
+	// shouldComponentUpdate(nextProps, nextState) {
+	// 	return this.props.routeItems.length === nextProps.routeItems.length;
+	// }
 
 	render() {
 		return (

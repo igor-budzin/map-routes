@@ -14,7 +14,7 @@ export default class Sidebar extends React.Component {
 			inputText: '',
 			autocompleteArray: [],
 			routeItems: [],
-			checked: false
+			checkedType: localStorage.getItem('routeVisibleType') === 'marker' ? true : false
 		};
 
 		this.autocompleteService = new google.maps.places.AutocompleteService();
@@ -40,7 +40,7 @@ export default class Sidebar extends React.Component {
 
 	handlePickAutocomplete = (item) => {
 		this.fieldFrom.value = '';
-		this.setState({autocompleteArray: []});
+		this.setState({autocompleteArray: [], inputText: ''});
 
 		const placesService = new google.maps.places.PlacesService(document.getElementById('map2'));
 
@@ -58,14 +58,23 @@ export default class Sidebar extends React.Component {
 	}
 
 	onChangeType = (event) => {
-		this.setState({checked: !this.state.checked}, () => {
-			this.props.onChangeType(this.state.checked ? 'marker' : 'route');
+		this.setState({checkedType: !this.state.checkedType}, () => {
+			const type = this.state.checkedType ? 'marker' : 'route';
+			this.props.onChangeType(type);
+			localStorage.setItem('routeVisibleType', type);
 		});
-		
 	}
 
 	onChangeTheme = (event) => {
 		console.log(event.target.checked);
+	}
+
+	onDeleteRouteItem = (id) => {
+		let tmpRouteItems = this.state.routeItems.filter((item) => {
+			return item.id !== id;
+		});
+		this.setState({routeItems: tmpRouteItems})
+		this.props.getRouteItems(tmpRouteItems);
 	}
 
 	render() {
@@ -78,7 +87,7 @@ export default class Sidebar extends React.Component {
 						<label htmlFor="checkbox" className="left-label">Route</label>
 						<input
 							onChange={this.onChangeType}
-							checked={this.state.checked}
+							checked={this.state.checkedType}
 							type="checkbox"
 							className="switcher"
 							id="checkbox"
@@ -90,7 +99,7 @@ export default class Sidebar extends React.Component {
 
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
-				<RouteList routeItems={this.state.routeItems} />
+				<RouteList routeItems={this.state.routeItems} onDeleteRouteItem={this.onDeleteRouteItem} />
 			</React.Fragment>
 		);
 	}

@@ -15,7 +15,7 @@ export default class App extends React.Component {
 
 		this.state = {
 			routeItems: [],
-			routeVisibleType: 'route'
+			routeVisibleType: localStorage.getItem('routeVisibleType') !== null ? localStorage.getItem('routeVisibleType') : 'route'
 		}
 	}
 

@@ -6,6 +6,8 @@ const iconMarker = require('./assets/img/marker.svg');
 export default class GoogleMap extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.markers = [];
 	}
 
 	componentDidMount() {
@@ -20,10 +22,6 @@ export default class GoogleMap extends React.Component {
 			styles: mapStyle,
 			icon: iconMarker
 		});
-	}
-
-	clearMap() {
-
 	}
 
 	buildRoute() {
@@ -49,26 +47,30 @@ export default class GoogleMap extends React.Component {
 	}
 
 	setMarkers() {
+		const _this = this;
 		this.props.routeItems.forEach((item) => {
-			const marker = new google.maps.Marker({
+			this.markers.push(new google.maps.Marker({
 				map: this.map,
 				position: new google.maps.LatLng(item.lat, item.lng),
 				icon: iconMarker,
 				animation: google.maps.Animation.DROP
-			});
+			}));
 		});	
 	}
 
 	componentDidUpdate() {
+		// Clear directions from map
 		if(this.directionsDisplay != null) {
 			this.directionsDisplay.setMap(null);
 			this.directionsDisplay = null;
 		}
+		// Clear markers from map
+		this.markers.forEach((marker) => {
+			marker.setMap(null);
+		});
 
 		this.directionsService = new google.maps.DirectionsService;
 		this.directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
-
-		// this.clearMap();
 
 		if(this.props.routeItems.length === 1) {
 			this.setMarkers();
