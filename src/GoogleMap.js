@@ -6,12 +6,13 @@ const iconMarker = require('./assets/img/marker.svg');
 export default class GoogleMap extends React.Component {
 	constructor(props) {
 		super(props);
-
-		this.directionsService = new google.maps.DirectionsService;
-		this.directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
 	}
 
 	componentDidMount() {
+		this.initMap();
+	}
+
+	initMap() {
 		this.map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 13,
 			center: new google.maps.LatLng(49.8375807, 24.0022641),
@@ -19,6 +20,10 @@ export default class GoogleMap extends React.Component {
 			styles: mapStyle,
 			icon: iconMarker
 		});
+	}
+
+	clearMap() {
+
 	}
 
 	buildRoute() {
@@ -38,7 +43,6 @@ export default class GoogleMap extends React.Component {
 			waypoints: waypts
 		}, (response, status) => {
 			if(status === 'OK') {
-				console.log("44444")
 				this.directionsDisplay.setDirections(response);
 			}
 		});
@@ -56,20 +60,25 @@ export default class GoogleMap extends React.Component {
 	}
 
 	componentDidUpdate() {
-		this.directionsDisplay.setDirections({routes: []});
+		if(this.directionsDisplay != null) {
+			this.directionsDisplay.setMap(null);
+			this.directionsDisplay = null;
+		}
+
+		this.directionsService = new google.maps.DirectionsService;
+		this.directionsDisplay = new google.maps.DirectionsRenderer({map: this.map});
+
+		// this.clearMap();
 
 		if(this.props.routeItems.length === 1) {
 			this.setMarkers();
-			console.log('111')
 		}
 		else if(this.props.routeItems.length >= 1) {
 			if(this.props.routeVisibleType === 'route') {
 				this.buildRoute();
-				console.log('222')
 			}
 			else if(this.props.routeVisibleType === 'marker') {
 				this.setMarkers();
-				console.log('3333')
 			}
 		}
 	}

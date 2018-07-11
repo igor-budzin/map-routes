@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import {Checkbox} from 'antd';
+import 'antd/lib/checkbox/style';
 
 import Autocomplete from './autocomplete';
 import RouteList from './RouteList'
@@ -62,6 +64,10 @@ export default class Sidebar extends React.Component {
 		
 	}
 
+	onChangeTheme = (event) => {
+		console.log(event.target.checked);
+	}
+
 	render() {
 		return (
 			<React.Fragment>
@@ -80,10 +86,7 @@ export default class Sidebar extends React.Component {
 						<label htmlFor="checkbox">Markers</label>
 					</div>
 
-					<label className="checkbox-wrapper default theme">Light theme
-						<input type="checkbox" />
-						<span className="checkmark"></span>
-					</label>
+					<Checkbox className="theme-checkbox" onChange={this.onChangeTheme}>Light theme</Checkbox>
 
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
