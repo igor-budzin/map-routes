@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import Sidebar from './sidebar';
 import GoogleMap from './GoogleMap';
@@ -30,14 +31,6 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<header>
-					<div className="logo">Logotype</div>
-					<nav>
-						<a href="#">Create Route</a>
-						<a href="#">Saved Routes</a>
-						<a href="#">About App</a>
-					</nav>
-				</header>
 				<GoogleMap
 					routeItems={this.state.routeItems}
 					routeVisibleType={this.state.routeVisibleType}
