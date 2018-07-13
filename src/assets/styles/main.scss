@@ -129,6 +129,7 @@ section {
 		&:hover {
 			background-color: #f3f9ff;
 			background-image: url('../img/drag.png');
+			background-position-x: 10px;
 		}
 		&:active {
 			background-color: #e9f3fd;
@@ -177,6 +178,14 @@ section {
 	.route-list {
 		max-height: 450px;
 		overflow-y: scroll;
+	}
+	.distance {
+		display: inline-block;
+		float: right;
+		height: 32px;
+		margin-top: 15px;
+		line-height: 32px;
+		font-size: 16px;
 	}
 }
 
