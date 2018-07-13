@@ -99,7 +99,12 @@ export default class Sidebar extends React.Component {
 
 					{this.state.autocompleteArray.length > 0 ? <Autocomplete handlePickAutocomplete={this.handlePickAutocomplete} autocompleteArray={this.state.autocompleteArray} /> : ''}
 				</aside>
-				<RouteList routeItems={this.state.routeItems} onDeleteRouteItem={this.onDeleteRouteItem} />
+				<RouteList
+					distance={this.props.distance}
+					routeItems={this.state.routeItems}
+					onDeleteRouteItem={this.onDeleteRouteItem}
+					showSaveRouteModal={this.props.showSaveRouteModal}
+				/>
 			</React.Fragment>
 		);
 	}

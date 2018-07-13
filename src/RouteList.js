@@ -20,7 +20,10 @@ const List = (props) => {
 				<div className="route-list">
 					{list}
 				</div>
-				<Button className="save-btn" type="primary">Save</Button>
+				<Button className="save-btn" type="primary" onClick={props.showSaveRouteModal}>Save</Button>
+				<div className="distance">
+					{props.distance > 0 ? `Distance: ~ ${props.distance} km` : null}
+				</div>
 			</React.Fragment>
 		);
 	}

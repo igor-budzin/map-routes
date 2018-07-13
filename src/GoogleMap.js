@@ -41,13 +41,17 @@ export default class GoogleMap extends React.Component {
 			waypoints: waypts
 		}, (response, status) => {
 			if(status === 'OK') {
+				let distance = 0;
+				response.routes[0].legs.forEach((item) => {
+					distance += item.distance.value;
+				});
+				this.props.onChangeDistance(Math.round(distance/1000));
 				this.directionsDisplay.setDirections(response);
 			}
 		});
 	}
 
 	setMarkers() {
-		const _this = this;
 		this.props.routeItems.forEach((item) => {
 			this.markers.push(new google.maps.Marker({
 				map: this.map,
@@ -83,6 +87,10 @@ export default class GoogleMap extends React.Component {
 				this.setMarkers();
 			}
 		}
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextProps.reloadMap;
 	}
 
 	render() {
