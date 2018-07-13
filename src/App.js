@@ -33,6 +33,26 @@ export default class App extends React.Component {
 
 	saveRouteToStorage = (routeName) => {
 		this.setState({visibleSaveRouteModal: false, reloadMap: false});
+		
+		const localRoutes = JSON.parse(localStorage.getItem('localRoutes')) || [];
+
+		const currentRouteObj = {
+			routeName: routeName,
+			routeItems: this.state.routeItems,
+			distance: this.state.distance,
+			routeVisibleType: this.state.routeVisibleType,
+			createDate: new Date().toUTCString()
+		};
+
+		localRoutes.push(currentRouteObj)
+		localStorage.setItem('localRoutes', JSON.stringify(localRoutes));
+
+		this.setState({
+			distance: 0,
+			reloadMap: true,
+			routeItems: []
+		});
+
 		console.log('Saved to storage: ' + routeName);
 	}
 
