@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios'
 
 import Sidebar from './sidebar';
 import GoogleMap from './GoogleMap';
@@ -34,26 +35,41 @@ export default class App extends React.Component {
 	saveRouteToStorage = (routeName) => {
 		this.setState({visibleSaveRouteModal: false, reloadMap: false});
 		
-		const localRoutes = JSON.parse(localStorage.getItem('localRoutes')) || [];
+		// const localRoutes = JSON.parse(localStorage.getItem('localRoutes')) || [];
 
-		const currentRouteObj = {
-			routeName: routeName,
-			routeItems: this.state.routeItems,
-			distance: this.state.distance,
-			routeVisibleType: this.state.routeVisibleType,
-			createDate: new Date().toUTCString()
-		};
+		// const currentRouteObj = {
+		// 	routeName: routeName,
+		// 	routeItems: this.state.routeItems,
+		// 	distance: this.state.distance,
+		// 	routeVisibleType: this.state.routeVisibleType,
+		// 	createDate: new Date().toUTCString()
+		// };
 
-		localRoutes.push(currentRouteObj)
-		localStorage.setItem('localRoutes', JSON.stringify(localRoutes));
+		// localRoutes.push(currentRouteObj)
+		// localStorage.setItem('localRoutes', JSON.stringify(localRoutes));
 
-		this.setState({
-			distance: 0,
-			reloadMap: true,
-			routeItems: []
+		// this.setState({
+		// 	distance: 0,
+		// 	reloadMap: true,
+		// 	routeItems: []
+		// });
+
+		axios({
+			method: 'get',
+			url: '/save-route',
+			data: {
+				routeName: 'dsds'
+			}
+		})
+		.then((response) => {
+			console.log(response);
+			console.log('Saved to storage: ' + routeName);
+		})
+		.catch((error) => {
+			console.log(error);
 		});
 
-		console.log('Saved to storage: ' + routeName);
+		
 	}
 
 	showSaveRouteModal = () => {
