@@ -1,18 +1,18 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const outputPath = path.resolve(__dirname, './dist');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
 	entry: {
 		app: [
-			'react-hot-loader/patch',
-			path.resolve(__dirname, './src/index.js')
+			path.resolve(__dirname, './client/src/index.js')
 		]
 	},
 	output: {
-		path: outputPath,
-		filename: '[name].js'
+		path: path.resolve(__dirname, './client/dist'),
+		filename: 'bundle.js',
+		publicPath: '/',
 	},
 	module: {
 		rules: [
@@ -27,7 +27,7 @@ module.exports = {
 					{loader: 'style-loader'},
 					{loader: 'css-loader'},
 					{loader: 'sass-loader'}
-        		]
+				]
 			},
 			{
 				test: /\.less$/,
@@ -52,13 +52,13 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, './src/assets/index.html'),
+			template: path.join(__dirname, './client/src/assets/index.html'),
 			filename: 'index.html',
-			path: outputPath
+			path: path.resolve(__dirname, './client/dist')
 		}),
-		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+		// new webpack.NamedModulesPlugin(),
+		// new webpack.HotModuleReplacementPlugin(),
+		new LiveReloadPlugin()
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, './dist'),
