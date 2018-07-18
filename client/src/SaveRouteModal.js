@@ -21,10 +21,7 @@ export default class SaveRouteModal extends React.Component {
 	handleOk = () => {
 		if(this.input.value) {
 			this.setState({loading: true});
-			setTimeout(() => {
-				this.props.saveRouteToStorage(this.input.value);
-				this.setState({loading: false});
-			}, 1500);
+			this.props.saveRouteToStorage(this.input.value);
 		}
 	}
 

@@ -6,7 +6,8 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 module.exports = {
 	entry: {
 		app: [
-			path.resolve(__dirname, './client/src/index.js')
+			path.resolve(__dirname, './client/src/index.js'),
+			'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000'
 		]
 	},
 	output: {
@@ -14,6 +15,8 @@ module.exports = {
 		filename: 'bundle.js',
 		publicPath: '/',
 	},
+	mode: 'development',
+	devtool: 'eval',
 	module: {
 		rules: [
 			{
@@ -56,12 +59,12 @@ module.exports = {
 			filename: 'index.html',
 			path: path.resolve(__dirname, './client/dist')
 		}),
-		// new webpack.NamedModulesPlugin(),
-		// new webpack.HotModuleReplacementPlugin(),
-		new LiveReloadPlugin()
+		new webpack.NamedModulesPlugin(),
+		new webpack.HotModuleReplacementPlugin()
+		// new LiveReloadPlugin()
 	],
 	devServer: {
-		contentBase: path.resolve(__dirname, './dist'),
+		contentBase: path.resolve(__dirname, './client/dist'),
 		port: 3000,
 		historyApiFallback: true,
 		inline: true,

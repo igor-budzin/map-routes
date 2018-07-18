@@ -32,38 +32,21 @@ export default class App extends React.Component {
 		this.setState({distance: distance, reloadMap: true});
 	}
 
-	saveRouteToStorage = (routeName) => {
-		this.setState({visibleSaveRouteModal: false, reloadMap: false});
-		
-		// const localRoutes = JSON.parse(localStorage.getItem('localRoutes')) || [];
-
-		// const currentRouteObj = {
-		// 	routeName: routeName,
-		// 	routeItems: this.state.routeItems,
-		// 	distance: this.state.distance,
-		// 	routeVisibleType: this.state.routeVisibleType,
-		// 	createDate: new Date().toUTCString()
-		// };
-
-		// localRoutes.push(currentRouteObj)
-		// localStorage.setItem('localRoutes', JSON.stringify(localRoutes));
-
-		// this.setState({
-		// 	distance: 0,
-		// 	reloadMap: true,
-		// 	routeItems: []
-		// });
-
-		axios({
-			method: 'get',
-			url: '/save-route',
-			data: {
-				routeName: 'dsds'
-			}
+	saveRouteToStorage = (routeName) => {		
+		axios.post('/save-route', {
+			routeName: routeName,
+			routeItems: JSON.stringify(this.state.routeItems),
+			distance: this.state.distance,
+			routeVisibleType: this.state.routeVisibleType
 		})
 		.then((response) => {
-			console.log(response);
-			console.log('Saved to storage: ' + routeName);
+			this.setState({
+				visibleSaveRouteModal: false,
+				reloadMap: false,
+				distance: 0,
+				reloadMap: true,
+				routeItems: []
+			});
 		})
 		.catch((error) => {
 			console.log(error);
