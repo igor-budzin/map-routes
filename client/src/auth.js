@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Icon, Form, Checkbox, Input} from 'antd';
+import axios from 'axios';
 
 import 'antd/lib/icon/style';
 import 'antd/lib/button/style';
@@ -11,7 +12,16 @@ export default class Auth extends React.Component {
 		super(props);
 	}
 
+	handleGoogleAuth = () => {
+		window.location = 'http://localhost:4000/auth/google/login';
+		// axios.get('/auth/google/login')
+		// .then((responce) => {
+		// 	console.log(responce);
+		// });
+	}
+
 	render() {
+		
 		return (
 			<div className="auth-block">
 				<Form onSubmit={this.handleSubmit} className="login-form">
@@ -35,7 +45,7 @@ export default class Auth extends React.Component {
 					<Icon type="facebook" />
 					Facebook
 				</button>
-				<button className="google">
+				<button className="google" onClick={this.handleGoogleAuth}>
 					<Icon type="google" />
 					Google
 				</button>

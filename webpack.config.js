@@ -61,7 +61,6 @@ module.exports = {
 		}),
 		new webpack.NamedModulesPlugin(),
 		new webpack.HotModuleReplacementPlugin()
-		// new LiveReloadPlugin()
 	],
 	devServer: {
 		contentBase: path.resolve(__dirname, './client/dist'),

@@ -1,9 +1,17 @@
-import express from 'express'; 
-import webpackMiddleware from 'webpack-dev-middleware';
-import webpack from 'webpack';
-import webpackConfig from '../webpack.config.js';
+const express = require('express');
+
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpack = require('webpack');
+const webpackConfig = require('../webpack.config');
+
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const passport = require('passport');
+const cookieParser = require('cookie-parser');
+const cookieSession = require('cookie-session');
+
+const auth = require('./auth/auth');
+const routes = require('./routes');
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -25,6 +33,15 @@ const app = express();
 	}));
 })();
 
+
+auth(passport);
+
+app.use(passport.initialize());
+app.use(cookieSession({
+	name: 'session',
+	keys: ['123']
+}));
+app.use(cookieParser());
 app.use(webpackMiddleware(webpack(webpackConfig)));
 app.use(bodyParser.json());
 
@@ -35,43 +52,8 @@ const connection = mysql.createConnection({
 	database: 'map-routes'
 });
 
-// app.get("/test", function(req, res) {
-// 	// res.status(200).send("Welcome to our restful API");
-// 	connection.query('SELECT * FROM routes', (error, results, fields) => {
-// 		// console.log(results)
-// 		res.send('222222222222');
-// 	});
-// });
 
-app.post('/save-route', (req, res) => {
-	const name = req.body.routeName;
-	const points = req.body.routeItems;
-	const distance = req.body.distance;
-	const routeVisibleType = req.body.routeVisibleType;
-	const createDate = new Date().toString();
-
-	const query = `INSERT INTO routes 
-		(name, points, distance, routeVisibleType, createDate) VALUES 
-		('${name}', '${points}', '${distance}', '${routeVisibleType}', '${createDate}')`
-
-	connection.connect();
-	connection.query(query, (error, results, fields) => {
-		if (error) throw error;
-		res.send('ok');
-		connection.end();
-	});
-});
-
-
- 
-// connection.connect(function(err) {
-//   if (err) {
-//     console.error('error connecting: ' + err.stack);
-//     return;
-//   }
- 
-//   console.log('connected as id ' + connection.threadId);
-// });
+routes(app, connection, passport);
 
 
 app.listen(port, () => {
