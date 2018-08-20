@@ -1,15 +1,11 @@
-// Libraries
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import axios from 'axios';
+import React from 'react';
+import axios from 'axios'
 
-import GoogleMap from 'universal/components/GoogleMap';
-import Sidebar from 'universal/components/Sidebar';
-import SaveRouteModal from 'universal/components/SaveRouteModal';
+import Sidebar from './sidebar';
+import GoogleMap from './GoogleMap';
+import SaveRouteModal from './SaveRouteModal';
 
-
-@connect(mapStateToProps, mapDispatchToProps)
-class CreateRouteContainer extends Component {
+export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -35,7 +31,7 @@ class CreateRouteContainer extends Component {
 	}
 
 	saveRouteToStorage = (routeName) => {		
-		axios.post('/api/save-route', {
+		axios.post('/save-route', {
 			routeName: routeName,
 			routeItems: JSON.stringify(this.state.routeItems),
 			distance: this.state.distance,
@@ -68,7 +64,7 @@ class CreateRouteContainer extends Component {
 	render() {
 		console.log(document.cookie);
 		return (
-			<Fragment>
+			<React.Fragment>
 				<GoogleMap
 					onChangeDistance={this.onChangeDistance}
 					routeItems={this.state.routeItems}
@@ -86,19 +82,7 @@ class CreateRouteContainer extends Component {
 					visibleSaveRouteModal={this.state.visibleSaveRouteModal}
 					hideSaveRouteModal={this.hideSaveRouteModal}
 				/>
-			</Fragment>
+			</React.Fragment>
 		);
 	}
 }
-
-
-function mapStateToProps(state, props) {
-	return {};
-}
-
-
-function mapDispatchToProps(dispatch, props) {
-	return {};
-}
-
-export default CreateRouteContainer;
