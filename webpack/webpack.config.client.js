@@ -71,7 +71,8 @@ export default {
  ],
  module: {
    loaders: [
-     {test: /\.(png|j|jpeg|gif|svg|woff|woff2)$/,
+     {
+       test: /\.(png|j|jpeg|gif|svg|woff|woff2)$/,
        use: {
          loader: 'url-loader',
          options: {
@@ -81,25 +82,35 @@ export default {
      },
 
      // JavaScript
-     {test: /\.js$/,
+     {
+       test: /\.js$/,
        loader: 'babel-loader',
        include: clientInclude
      },
 
+     // JavaScript
+     {
+       test: /\.css|less$/,
+       loader: 'babel-loader',
+       include: clientInclude,
+       loaders: ExtractTextPlugin.extract({
+         fallback: 'style-loader',
+         use: [
+           {loader: 'css-loader',
+            options: {
+              root: src,
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]_[local]_[hash:base64:5]'
+            }}
+         ]})
+     },
+
      // CSS
-     {test: /\.css|less$/,
+     {
+      test: /\.scss$/,
       include: clientInclude,
-      loaders: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          {loader: 'css-loader',
-           options: {
-             root: src,
-             modules: true,
-             importLoaders: 1,
-             localIdentName: '[name]_[local]_[hash:base64:5]'
-           }}
-        ]})
+      loaders: ExtractTextPlugin.extract('style-loader', 'css-loader', 'sass-loader')
      }
 
    ]

@@ -156,10 +156,37 @@
 	"buffers":
 	[
 		{
-			"file": "src/server/server.js",
+			"file": "src/universal/components/App/App.scss",
 			"settings":
 			{
-				"buffer_size": 1034,
+				"buffer_size": 36,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "webpack/webpack.config.client.js",
+			"settings":
+			{
+				"buffer_size": 2859,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "webpack/webpack.config.development.js",
+			"settings":
+			{
+				"buffer_size": 2341,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/universal/components/App/App.js",
+			"settings":
+			{
+				"buffer_size": 255,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -203,27 +230,53 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Code/map-routes",
+		"/C/Code/map-routes/src",
+		"/C/Code/map-routes/src/universal",
+		"/C/Code/map-routes/src/universal/components",
+		"/C/Code/map-routes/src/universal/components/App",
+		"/C/Code/map-routes/src/universal/components/Header",
+		"/C/Code/map-routes/webpack"
+	],
 	"file_history":
 	[
+		"/C/Code/map-routes/webpack/webpack.config.client.js",
+		"/C/OpenServer/domains/test3/inc/view.ogo.php",
+		"/C/Users/Igor/Desktop/ogolist.html",
+		"/C/OpenServer/domains/test3/file/ban/catalog104_body.txt",
+		"/C/OpenServer/domains/test3/skin/ua/catalogbody.html",
+		"/C/Code/map-routes/src/universal/routes/static.js",
+		"/C/Code/map-routes/src/universal/components/Header/Header.js",
+		"/C/Code/map-routes/src/universal/pages/CreateRoutePage.js",
+		"/C/Code/map-routes/src/universal/containers/App/AppContainer.js",
+		"/C/Code/map-routes/src/client/client.js",
+		"/C/Code/map-routes/src/universal/styles/global.css",
+		"/C/Code/map-routes/src/universal/components/App/App.css",
+		"/C/Code/map-routes/src/client/containers/AppContainer.js",
+		"/C/Code/map-routes/README.md",
+		"/C/Code/map-routes/package.json",
+		"/C/Code/map-routes/src/universal/routes/Routes.js",
+		"/C/Code/map-routes/src/universal/pages/AboutPage.js",
+		"/C/Code/map-routes/src/universal/pages/SavedRoutesPage.js",
+		"/C/Code/map-routes/src/universal/components/App/App.js",
+		"/C/Code/map-routes/src/server/Html.js",
+		"/C/Code/map-routes/src/server/ssr.js",
+		"/C/Code/map-routes/src/server/server.js",
+		"/C/Code/map-routes/src/universal/redux/createStore.js",
 		"/C/Code/test/src/universal/redux/createStore.js",
 		"/C/Code/test/src/server/Html.js",
 		"/C/Code/test/src/universal/redux/reducers/index.js",
 		"/C/Code/test/src/server/server.js",
 		"/C/Code/test/src/server/ssr.js",
 		"/C/Code/test/package.json",
-		"/C/Code/map-routes/src/server/Html.js",
-		"/C/Code/map-routes/src/server/ssr.js",
 		"/C/Code/map-routes/webpack/webpack.config.server.js",
 		"/C/Code/map-routes/webpack/webpack.config.dev.js",
-		"/C/Code/map-routes/src/universal/components/App/App.js",
-		"/C/Code/map-routes/src/universal/containers/App/AppContainer.js",
 		"/C/Code/map-routes/src/universal/Routes.js",
-		"/C/Code/map-routes/src/server/server.js",
 		"/C/Code/map-routes/src/server/server-old.js",
-		"/C/Code/map-routes/src/client/client.js",
 		"/C/Code/map-routes/src/universal/redux/reducers/index.js",
 		"/C/Code/map-routes/src/helpers/createStore.js",
-		"/C/Code/map-routes/package.json",
 		"/C/Code/map-routes/src/server/Routes.js",
 		"/C/Code/map-routes/src/client/Root.js",
 		"/C/Code/test2/src/universal/routes/index.js",
@@ -316,27 +369,11 @@
 		"/C/Code/ssr/src/client/App.js",
 		"/C/Code/ssr/src/client/reducers/adminsReducer.js",
 		"/C/Code/ssr/src/client/actions/index.js",
-		"/C/Code/ssr/src/client/client.js",
-		"/C/Code/ssr/src/client/reducers/usersReducer.js",
-		"/C/Code/ssr/src/helpers/createStore.js",
-		"/C/Code/ssr/src/client/components/UsersList.js",
-		"/C/Code/ssr/.gitignore",
-		"/C/Code/ssr/src/client/components/Home.js",
-		"/C/Code/ssr/webpack.server.js",
-		"/C/Code/ssr/client/components/Home.js",
-		"/C/Code/ssr/index.js",
-		"/C/Users/Igor/Desktop/FE_9_1_homework_html-basics/task/content.txt",
-		"/C/Users/Igor/Desktop/FE_9_1_homework_html-basics/homework/style.css",
-		"/C/Users/Igor/Desktop/FE_9_1_homework_html-basics/homework/index.html",
-		"/C/Code/test/.babelrc",
-		"/C/Code/test/shared/components/AppBar.jsx",
-		"/C/Code/map-routes/webpack.config.js",
-		"/C/Code/map-routes/server/routes.js",
-		"/C/Code/test/server/runner.js"
+		"/C/Code/ssr/src/client/client.js"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -352,6 +389,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"У зв'язку із зміною курсу валют, коефіцієнт пере",
+			"У зв'язку",
+			"У зв'язку із зміною курсу валют, коефіцієнт пере",
+			"У зв'язку із зміною курсу валют, коефіцієнт перерахунку",
+			"React.Fragment",
+			"Fragment",
+			"styles.button",
+			"App",
+			"CreateRoutePage",
 			"\tapp.use(function(err, req, res, next) {\n\t\tconsole.error('error : ', err)\n\t\tres.status(err.status || 500);\n\t});",
 			"NODE_ENV",
 			"development",
@@ -470,16 +516,7 @@
 			"onChnageType",
 			"aside",
 			"aside input",
-			"section",
-			"'",
-			"ios8-switch",
-			"routeItems",
-			"length",
-			"});\n",
-			"20px",
-			"_this",
-			"tmp",
-			"var"
+			"section"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -502,11 +539,11 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/server/server.js",
+					"file": "src/universal/components/App/App.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1034,
+						"buffer_size": 36,
 						"regions":
 						{
 							"bookmarks":
@@ -522,20 +559,134 @@
 						"selection":
 						[
 							[
-								737,
-								737
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "webpack/webpack.config.client.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2859,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								2312,
+								2312
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 570.0,
+						"translation.y": 1482.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "webpack/webpack.config.development.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2341,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								2310,
+								2310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/universal/components/App/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 255,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -723,10 +874,10 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 259.0,
+	"side_bar_width": 272.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -55,7 +55,7 @@ export default {
   },
   module: {
     loaders: [
-      {test: /\.(png|j|jpeg|gif|svg|woff|woff2)$/,
+      {test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
         use: {
           loader: 'url-loader',
           options: {
@@ -83,6 +83,22 @@ export default {
             importLoaders: 1,
             localIdentName: '[name]_[local]_[hash:base64:5]'
           }}
+       ]
+      },
+
+      // SCSS
+      {test: /\.scss$/,
+       include: clientInclude,
+       use: [
+         {loader: 'style-loader'},
+         {loader: 'css-loader',
+          options: {
+            root: src,
+            
+            importLoaders: 1,
+            localIdentName: '[name]_[local]_[hash:base64:5]'
+          }},
+          {loader: 'sass-loader'}
        ]
       }
     ]

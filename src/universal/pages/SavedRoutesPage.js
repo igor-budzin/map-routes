@@ -1,23 +1,18 @@
 // Libraries
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import React, { Component, Fragment } from 'react';
 
+import SavedRoutesContainer from 'universal/containers/SavedRoutes/SavedRoutesContainer';
+import Header from 'universal/components/Header/Header';
 
-@connect(mapStateToProps, mapDispatchToProps)
 class SavedRoutesPage extends Component {
 	render () {
-		return (<h1>Saved Route Page</h1>);
+		return (
+			<Fragment>
+				<Header />
+				<SavedRoutesContainer />
+			</Fragment>
+		);
 	}
-}
-
-
-function mapStateToProps(state, props) {
-	return {};
-}
-
-
-function mapDispatchToProps(dispatch, props) {
-	return {};
 }
 
 export default SavedRoutesPage;

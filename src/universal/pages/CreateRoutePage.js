@@ -1,23 +1,18 @@
 // Libraries
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import React, { Component, Fragment } from 'react';
 
+import CreateRouteContainer from 'universal/containers/CreateRoute/CreateRouteContainer';
+import Header from 'universal/components/Header/Header';
 
-@connect(mapStateToProps, mapDispatchToProps)
 class CreateRoutePage extends Component {
 	render () {
-		return (<h1>Create Route Page</h1>);
+		return (
+			<Fragment>
+				<Header />
+				<CreateRouteContainer />
+			</Fragment>
+		);
 	}
-}
-
-
-function mapStateToProps(state, props) {
-	return {};
-}
-
-
-function mapDispatchToProps(dispatch, props) {
-	return {};
 }
 
 export default CreateRoutePage;

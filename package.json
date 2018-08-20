@@ -1,7 +1,7 @@
 {
-  "name": "univeral-hmr-ssr-react-redux-dokku",
+  "name": "map-routes",
   "version": "1.0.0",
-  "description": "Univeral JS application utilizing Hot Module Reloading, Server Side Rendering, Code Splitting with React, Redux, React Router 4 and a heroku like deploy setup with Dokku.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development node ./src/server/server.babel.js",
@@ -17,7 +17,6 @@
     "server-side-rendering",
     "hmr",
     "ssr",
-    "code-splitting",
     "webpack"
   ],
   "author": "Alexander J Ray <alexjamesray@gmail.com>",
@@ -27,6 +26,7 @@
     "autoprefixer": "^6.7.7",
     "babel-loader": "^6.4.1",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-import": "^1.8.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
@@ -35,16 +35,19 @@
     "babel-register": "^6.24.0",
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.9.3",
     "react-hot-loader": "^3.0.0-beta.6",
     "redux-devtools-extension": "^2.13.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.16.1",
+    "url-loader": "^1.1.1",
     "webpack": "^2.3.3",
     "webpack-dev-middleware": "^1.10.1",
     "webpack-hot-middleware": "^2.18.0"
   },
   "dependencies": {
+    "antd": "^3.8.2",
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
     "express": "^4.15.2",

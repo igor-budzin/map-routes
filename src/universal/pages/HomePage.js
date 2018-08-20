@@ -1,18 +1,18 @@
+// Libraries
 import React, { Component, Fragment } from 'react';
 
-import App from 'universal/components/App/App';
+import AboutContainer from 'universal/containers/About/AboutContainer';
 import Header from 'universal/components/Header/Header';
 
-class AppContainer extends Component {
-
+class HomePage extends Component {
 	render () {
 		return (
 			<Fragment>
 				<Header />
-				<App {...this.props}/>
+				<h1>Home page</h1>
 			</Fragment>
 		);
 	}
 }
 
-export default AppContainer;
+export default HomePage;
