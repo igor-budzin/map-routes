@@ -1,17 +1,18 @@
 // Libraries
 import React, { Component, Fragment } from 'react';
 
+import ContactContainer from 'universal/containers/Contact/ContactContainer';
 import Header from 'universal/components/Header/Header';
 
-class HomePage extends Component {
+class ContactPage extends Component {
 	render () {
 		return (
 			<Fragment>
 				<Header />
-				<h1>Home page</h1>
+				<ContactContainer />
 			</Fragment>
 		);
 	}
 }
 
-export default HomePage;
+export default ContactPage;

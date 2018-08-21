@@ -156,38 +156,35 @@
 	"buffers":
 	[
 		{
-			"file": "src/universal/components/App/App.scss",
+			"file": "src/universal/assets/styles/styles.scss",
 			"settings":
 			{
-				"buffer_size": 36,
+				"buffer_size": 6508,
 				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows",
+				"name": "styles.scss"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "webpack/webpack.config.client.js",
+			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 			"settings":
 			{
-				"buffer_size": 2859,
-				"encoding": "Cyrillic (Windows 1251)",
+				"buffer_size": 2458,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "webpack/webpack.config.development.js",
+			"file": "src/universal/routes/Routes.js",
 			"settings":
 			{
-				"buffer_size": 2341,
-				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/universal/components/App/App.js",
-			"settings":
-			{
-				"buffer_size": 255,
-				"encoding": "Cyrillic (Windows 1251)",
+				"buffer_size": 864,
 				"line_ending": "Windows"
 			}
 		}
@@ -233,35 +230,47 @@
 	"expanded_folders":
 	[
 		"/C/Code/map-routes",
+		"/C/Code/map-routes/odl-files",
+		"/C/Code/map-routes/odl-files/server",
 		"/C/Code/map-routes/src",
+		"/C/Code/map-routes/src/server",
 		"/C/Code/map-routes/src/universal",
 		"/C/Code/map-routes/src/universal/components",
-		"/C/Code/map-routes/src/universal/components/App",
-		"/C/Code/map-routes/src/universal/components/Header",
 		"/C/Code/map-routes/webpack"
 	],
 	"file_history":
 	[
+		"/C/Code/map-routes/README.md",
+		"/C/Code/map-routes/webpack/webpack.config.development.js",
+		"/C/Code/map-routes/src/universal/containers/About/AboutContainer.js",
+		"/C/Code/map-routes/src/server/Html.js",
+		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
+		"/C/Code/map-routes/src/universal/components/App/App.js",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
+		"/C/Code/map-routes/src/universal/components/Header/Header.js",
+		"/C/Code/map-routes/src/universal/components/Header/Header.scss",
+		"/C/Code/map-routes/old-files2/shared/assets/styles/main.scss",
+		"/C/Code/map-routes/package.json",
+		"/C/Code/map-routes/src/universal/pages/CreateRoutePage.js",
+		"/C/Code/map-routes/src/universal/components/App/App.scss",
+		"/C/Code/map-routes/src/universal/pages/AboutPage.js",
+		"/C/Code/map-routes/src/universal/pages/SavedRoutesPage.js",
+		"/C/Code/map-routes/src/universal/containers/SavedRoute/SavedRoutesContainer.js",
+		"/C/Code/map-routes/src/universal/pages/HomePage.js",
+		"/C/Code/map-routes/src/universal/containers/App/AppContainer.js",
+		"/C/Code/map-routes/src/universal/routes/static.js",
+		"/C/Code/map-routes/src/universal/containers/About/About.scss",
+		"/C/Users/Igor/Desktop/Новая папка (6)/index.html",
 		"/C/Code/map-routes/webpack/webpack.config.client.js",
 		"/C/OpenServer/domains/test3/inc/view.ogo.php",
 		"/C/Users/Igor/Desktop/ogolist.html",
 		"/C/OpenServer/domains/test3/file/ban/catalog104_body.txt",
 		"/C/OpenServer/domains/test3/skin/ua/catalogbody.html",
-		"/C/Code/map-routes/src/universal/routes/static.js",
-		"/C/Code/map-routes/src/universal/components/Header/Header.js",
-		"/C/Code/map-routes/src/universal/pages/CreateRoutePage.js",
-		"/C/Code/map-routes/src/universal/containers/App/AppContainer.js",
 		"/C/Code/map-routes/src/client/client.js",
 		"/C/Code/map-routes/src/universal/styles/global.css",
 		"/C/Code/map-routes/src/universal/components/App/App.css",
 		"/C/Code/map-routes/src/client/containers/AppContainer.js",
-		"/C/Code/map-routes/README.md",
-		"/C/Code/map-routes/package.json",
 		"/C/Code/map-routes/src/universal/routes/Routes.js",
-		"/C/Code/map-routes/src/universal/pages/AboutPage.js",
-		"/C/Code/map-routes/src/universal/pages/SavedRoutesPage.js",
-		"/C/Code/map-routes/src/universal/components/App/App.js",
-		"/C/Code/map-routes/src/server/Html.js",
 		"/C/Code/map-routes/src/server/ssr.js",
 		"/C/Code/map-routes/src/server/server.js",
 		"/C/Code/map-routes/src/universal/redux/createStore.js",
@@ -358,18 +367,7 @@
 		"/C/OpenServer/domains/news/include/core/class.VMEngine.php",
 		"/C/OpenServer/domains/news/include/core/class.pear.php",
 		"/C/Code/ssr/src/client/pages/AdminsListPage.js",
-		"/C/Code/ssr/src/client/components/hocs/requireAuth.js",
-		"/C/Code/ssr/src/helpers/renderer.js",
-		"/C/Code/ssr/src/client/Routes.js",
-		"/C/Code/ssr/src/client/pages/HomePage.js",
-		"/C/Code/ssr/src/client/components/Header.js",
-		"/C/Code/ssr/src/client/pages/NotFoundPage.js",
-		"/C/Code/ssr/src/client/reducers/authReducer.js",
-		"/C/Code/ssr/src/client/reducers/index.js",
-		"/C/Code/ssr/src/client/App.js",
-		"/C/Code/ssr/src/client/reducers/adminsReducer.js",
-		"/C/Code/ssr/src/client/actions/index.js",
-		"/C/Code/ssr/src/client/client.js"
+		"/C/Code/ssr/src/client/components/hocs/requireAuth.js"
 	],
 	"find":
 	{
@@ -389,6 +387,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"React",
+			"Sidebar",
+			"GoogleMap",
+			"About",
+			"AboutPage",
+			"About",
+			"div",
+			"About",
+			"jfdjk",
+			"h2",
+			"AboutPage",
+			"clickTag",
+			"clickTag ",
 			"У зв'язку із зміною курсу валют, коефіцієнт пере",
 			"У зв'язку",
 			"У зв'язку із зміною курсу валют, коефіцієнт пере",
@@ -503,20 +514,7 @@
 			"this",
 			"const",
 			"this",
-			"переглянути офіційний сайт",
-			"переглянути офіційний сайт ",
-			"переглянути друковане видання",
-			"onst ",
-			"4",
-			".checkbox-wrapper",
-			".checkbox-wrapper.default",
-			"div",
-			"heckbox-wrapper",
-			"label",
-			"onChnageType",
-			"aside",
-			"aside input",
-			"section"
+			"переглянути офіційний сайт"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -534,16 +532,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/universal/components/App/App.scss",
+					"file": "src/universal/assets/styles/styles.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 36,
+						"buffer_size": 6508,
 						"regions":
 						{
 							"bookmarks":
@@ -559,13 +557,42 @@
 						"selection":
 						[
 							[
-								36,
-								36
+								6508,
+								6508
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax"
+							"auto_name": "styles.scss",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -575,51 +602,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "webpack/webpack.config.client.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2859,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
-						},
-						"selection":
-						[
-							[
-								2312,
-								2312
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1482.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
-					"file": "webpack/webpack.config.development.js",
+					"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2341,
+						"buffer_size": 2458,
 						"regions":
 						{
 							"bookmarks":
@@ -635,18 +623,16 @@
 						"selection":
 						[
 							[
-								2310,
-								2310
+								1024,
+								1024
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1171.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -654,11 +640,11 @@
 				},
 				{
 					"buffer": 3,
-					"file": "src/universal/components/App/App.js",
+					"file": "src/universal/routes/Routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 255,
+						"buffer_size": 864,
 						"regions":
 						{
 							"bookmarks":
@@ -674,19 +660,20 @@
 						"selection":
 						[
 							[
-								79,
-								79
+								171,
+								171
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

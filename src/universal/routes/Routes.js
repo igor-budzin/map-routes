@@ -22,6 +22,7 @@ class Routes extends Component {
 				<Route exact location={location} path='/saved' component={RouteMap.SavedRoutesPage} />
 				<Route exact location={location} path='/about' component={RouteMap.AboutPage} />
 				<Route exact location={location} path='/create' component={RouteMap.CreateRoutePage} />
+				<Route exact location={location} path='/contact' component={RouteMap.ContactPage} />
 			</Fragment>
 		);
 	}

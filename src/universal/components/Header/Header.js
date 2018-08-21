@@ -9,6 +9,7 @@ class Header extends Component {
 				<nav>
 					<Link to="/create">Create Route</Link>
 					<Link to="/saved">Saved Routes</Link>
+					<Link to="/contact">Contacts</Link>
 					<Link to="/about">About</Link>
 				</nav>
 			</header>

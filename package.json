@@ -8,7 +8,8 @@
     "prod": "NODE_PATH=./src cross-env NODE_ENV=production node ./src/server/server.babel.js",
     "build": "npm run build:client && npm run build:server",
     "build:server": "cross-env NODE_ENV=production webpack --config ./webpack/server.babel.js",
-    "build:client": "cross-env NODE_ENV=production webpack --config ./webpack/client.babel.js"
+    "build:client": "cross-env NODE_ENV=production webpack --config ./webpack/client.babel.js",
+    "api": "nodemon --exec node ./api/server.js --watch api"
   },
   "keywords": [
     "react",
@@ -49,10 +50,15 @@
   },
   "dependencies": {
     "antd": "^3.8.2",
+    "body-parser": "^1.18.3",
     "classnames": "^2.2.5",
     "colors": "^1.1.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "express": "^4.15.2",
     "history": "^4.6.1",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.3",
