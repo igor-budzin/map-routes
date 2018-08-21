@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"const"
+			],
+			[
 				"bac",
 				"background-color\tproperty"
 			],
@@ -50,10 +54,6 @@
 			[
 				"req",
 				"require"
-			],
-			[
-				"co",
-				"connection"
 			],
 			[
 				"margin",
@@ -156,36 +156,40 @@
 	"buffers":
 	[
 		{
-			"file": "src/universal/assets/styles/styles.scss",
+			"file": "api/server.js",
 			"settings":
 			{
-				"buffer_size": 6508,
+				"buffer_size": 671,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/server/ssr.js",
+			"settings":
+			{
+				"buffer_size": 1146,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/universal/redux/createStore.js",
+			"settings":
+			{
+				"buffer_size": 837,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/routes.js",
+			"settings":
+			{
+				"buffer_size": 986,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows",
-				"name": "styles.scss"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
-			"settings":
-			{
-				"buffer_size": 2458,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/universal/routes/Routes.js",
-			"settings":
-			{
-				"buffer_size": 864,
-				"line_ending": "Windows"
+				"name": "routes.js"
 			}
 		}
 	],
@@ -230,35 +234,41 @@
 	"expanded_folders":
 	[
 		"/C/Code/map-routes",
-		"/C/Code/map-routes/odl-files",
-		"/C/Code/map-routes/odl-files/server",
 		"/C/Code/map-routes/src",
-		"/C/Code/map-routes/src/server",
 		"/C/Code/map-routes/src/universal",
-		"/C/Code/map-routes/src/universal/components",
-		"/C/Code/map-routes/webpack"
+		"/C/Code/map-routes/src/universal/redux",
+		"/C/Code/map-routes/src/universal/routes"
 	],
 	"file_history":
 	[
+		"/C/Code/map-routes/.gitignore",
+		"/C/Code/map-routes/package.json",
+		"/C/OpenServer/domains/news2/template/news/broadcast.html",
+		"/C/OpenServer/domains/news2/include/controllers/front_static.php",
+		"/C/OpenServer/domains/news2/include/models/model_static.php",
+		"/C/Code/map-routes/api/server.js",
+		"/C/Code/map-routes/src/universal/pages/HomePage.js",
+		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
+		"/C/Code/map-routes/src/universal/containers/Contact/ContactContainer.js",
+		"/C/Code/map-routes/src/universal/routes/Routes.js",
+		"/C/Code/map-routes/src/universal/routes/static.js",
+		"/C/Code/map-routes/src/universal/components/Header/Header.js",
+		"/C/Code/map-routes/src/universal/pages/ContactPage.js",
 		"/C/Code/map-routes/README.md",
 		"/C/Code/map-routes/webpack/webpack.config.development.js",
 		"/C/Code/map-routes/src/universal/containers/About/AboutContainer.js",
 		"/C/Code/map-routes/src/server/Html.js",
 		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
 		"/C/Code/map-routes/src/universal/components/App/App.js",
-		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
-		"/C/Code/map-routes/src/universal/components/Header/Header.js",
 		"/C/Code/map-routes/src/universal/components/Header/Header.scss",
 		"/C/Code/map-routes/old-files2/shared/assets/styles/main.scss",
-		"/C/Code/map-routes/package.json",
 		"/C/Code/map-routes/src/universal/pages/CreateRoutePage.js",
 		"/C/Code/map-routes/src/universal/components/App/App.scss",
 		"/C/Code/map-routes/src/universal/pages/AboutPage.js",
 		"/C/Code/map-routes/src/universal/pages/SavedRoutesPage.js",
 		"/C/Code/map-routes/src/universal/containers/SavedRoute/SavedRoutesContainer.js",
-		"/C/Code/map-routes/src/universal/pages/HomePage.js",
 		"/C/Code/map-routes/src/universal/containers/App/AppContainer.js",
-		"/C/Code/map-routes/src/universal/routes/static.js",
 		"/C/Code/map-routes/src/universal/containers/About/About.scss",
 		"/C/Users/Igor/Desktop/Новая папка (6)/index.html",
 		"/C/Code/map-routes/webpack/webpack.config.client.js",
@@ -270,7 +280,6 @@
 		"/C/Code/map-routes/src/universal/styles/global.css",
 		"/C/Code/map-routes/src/universal/components/App/App.css",
 		"/C/Code/map-routes/src/client/containers/AppContainer.js",
-		"/C/Code/map-routes/src/universal/routes/Routes.js",
 		"/C/Code/map-routes/src/server/ssr.js",
 		"/C/Code/map-routes/src/server/server.js",
 		"/C/Code/map-routes/src/universal/redux/createStore.js",
@@ -359,15 +368,7 @@
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/static-location.conf",
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/password",
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/.profile",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/.bashrc",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/HEAD",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/config",
-		"/C/OpenServer/domains/news/index.php",
-		"/C/OpenServer/domains/news/include/core/class.template.php",
-		"/C/OpenServer/domains/news/include/core/class.VMEngine.php",
-		"/C/OpenServer/domains/news/include/core/class.pear.php",
-		"/C/Code/ssr/src/client/pages/AdminsListPage.js",
-		"/C/Code/ssr/src/client/components/hocs/requireAuth.js"
+		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/.bashrc"
 	],
 	"find":
 	{
@@ -387,6 +388,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"var",
+			"112",
+			"FormItem",
+			"About",
+			"AboutContainer",
+			"AboutPage",
 			"React",
 			"Sidebar",
 			"GoogleMap",
@@ -508,13 +515,7 @@
 			"Стоврено",
 			"}));",
 			"onDelete",
-			"section",
-			"log",
-			"const",
-			"this",
-			"const",
-			"this",
-			"переглянути офіційний сайт"
+			"section"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -532,16 +533,16 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/universal/assets/styles/styles.scss",
+					"file": "api/server.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6508,
+						"buffer_size": 671,
 						"regions":
 						{
 							"bookmarks":
@@ -557,42 +558,89 @@
 						"selection":
 						[
 							[
-								6508,
-								6508
+								291,
+								291
 							]
 						],
 						"settings":
 						{
-							"auto_name": "styles.scss",
-							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/server/ssr.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1146,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								1042,
+								1042
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3432.0,
+						"translation.y": 114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "src/universal/redux/createStore.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 837,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								359,
+								359
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -602,71 +650,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2458,
-						"regions":
-						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
-						},
-						"selection":
-						[
-							[
-								1024,
-								1024
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 342.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
 					"buffer": 3,
-					"file": "src/universal/routes/Routes.js",
+					"file": "api/routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 864,
+						"buffer_size": 986,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
 						},
 						"selection":
 						[
 							[
-								171,
-								171
+								684,
+								674
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"auto_name": "routes.js",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

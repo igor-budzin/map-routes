@@ -31,7 +31,7 @@ function renderApp(url, res, store, assets) {
 }
 
 export const renderPage = function (req, res) {
-	const history = createHistory( );
+	const history = createHistory();
 	const store  = createStore(history);
 
 	const assets = require('../../build/assets.json');
@@ -45,7 +45,7 @@ export const renderPage = function (req, res) {
 };
 
 export const renderDevPage = function (req, res) {
-	const history = createHistory( );
+	const history = createHistory();
 	const store = createStore(history);
 	renderApp(req.url, res, store);
 };

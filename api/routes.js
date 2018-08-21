@@ -19,9 +19,21 @@ module.exports = (app, router, connection) => {
 		});
 	}); 
 
+	router.route('/get-routes').get((req, res) => {
+
+		const query = `SELECT * FROM routes`;
+
+		connection.connect();
+		connection.query(query, (error, results, fields) => {
+			if (error) throw error;
+			connection.end();
+			res.json(results);
+		});
+	});
+
 	router.route('/test').get((req, res) => {
 		res.send('ok test');
-	})
+	});
 }
 
 

@@ -1,16 +1,5 @@
-import {
-	createStore,
-	combineReducers,
-	applyMiddleware,
-	compose
-} from 'redux';
-
-import {
-	ConnectedRouter,
-	routerReducer,
-	routerMiddleware
-} from 'react-router-redux';
-
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import * as Reducers from './reducers/index.js';

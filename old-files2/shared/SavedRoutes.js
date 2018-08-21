@@ -4,7 +4,6 @@ import {Button} from 'antd';
 // import 'antd/lib/button/style';
 
 const List = () => {
-	const routes = null;
 	console.log(routes);
 	if(routes !== null) {
 		return (
@@ -22,12 +21,11 @@ const List = () => {
 							</span>
 						</td>
 					</tr>
-				)
-			})
-		)
+				);
+			});
+		);
 	}
 	else return null;
-	
 }
 
 export default class SavedRoutes extends React.Component {
