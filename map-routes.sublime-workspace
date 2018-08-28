@@ -156,40 +156,39 @@
 	"buffers":
 	[
 		{
-			"file": "api/server.js",
-			"settings":
-			{
-				"buffer_size": 671,
-				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/server/ssr.js",
-			"settings":
-			{
-				"buffer_size": 1146,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/universal/redux/createStore.js",
 			"settings":
 			{
-				"buffer_size": 837,
+				"buffer_size": 878,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "api/routes.js",
+			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 			"settings":
 			{
-				"buffer_size": 986,
+				"buffer_size": 2452,
 				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows",
-				"name": "routes.js"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/universal/redux/actions/mapActions.js",
+			"settings":
+			{
+				"buffer_size": 131,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/universal/redux/reducers/mapReducer.js",
+			"settings":
+			{
+				"buffer_size": 23,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -237,18 +236,30 @@
 		"/C/Code/map-routes/src",
 		"/C/Code/map-routes/src/universal",
 		"/C/Code/map-routes/src/universal/redux",
-		"/C/Code/map-routes/src/universal/routes"
+		"/C/Code/map-routes/src/universal/redux/actions",
+		"/C/Code/map-routes/src/universal/redux/reducers"
 	],
 	"file_history":
 	[
+		"/C/Code/map-routes/src/universal/modules/counter/containers/Counter/CounterContainer.js",
+		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
+		"/C/Code/map-routes/src/universal/components/CreateRouteContainer.js",
+		"/C/OpenServer/domains/vashmagazin/skin/ua/ogolist.html",
+		"/C/OpenServer/domains/news2/include/controllers/front_admin.php",
+		"/C/OpenServer/domains/news2/template/news/userslist.html",
+		"/C/OpenServer/domains/news2/template/news/rubricator.html",
+		"/C/Code/map-routes/api/server.js",
+		"/C/Code/map-routes/src/server/ssr.js",
+		"/C/Code/map-routes/src/universal/redux/createStore.js",
+		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
+		"/C/Code/map-routes/old-files2/shared/SavedRoutes.js",
+		"/C/Code/map-routes/api/routes.js",
 		"/C/Code/map-routes/.gitignore",
 		"/C/Code/map-routes/package.json",
 		"/C/OpenServer/domains/news2/template/news/broadcast.html",
 		"/C/OpenServer/domains/news2/include/controllers/front_static.php",
 		"/C/OpenServer/domains/news2/include/models/model_static.php",
-		"/C/Code/map-routes/api/server.js",
 		"/C/Code/map-routes/src/universal/pages/HomePage.js",
-		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
 		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
 		"/C/Code/map-routes/src/universal/containers/Contact/ContactContainer.js",
 		"/C/Code/map-routes/src/universal/routes/Routes.js",
@@ -259,7 +270,6 @@
 		"/C/Code/map-routes/webpack/webpack.config.development.js",
 		"/C/Code/map-routes/src/universal/containers/About/AboutContainer.js",
 		"/C/Code/map-routes/src/server/Html.js",
-		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
 		"/C/Code/map-routes/src/universal/components/App/App.js",
 		"/C/Code/map-routes/src/universal/components/Header/Header.scss",
 		"/C/Code/map-routes/old-files2/shared/assets/styles/main.scss",
@@ -280,9 +290,7 @@
 		"/C/Code/map-routes/src/universal/styles/global.css",
 		"/C/Code/map-routes/src/universal/components/App/App.css",
 		"/C/Code/map-routes/src/client/containers/AppContainer.js",
-		"/C/Code/map-routes/src/server/ssr.js",
 		"/C/Code/map-routes/src/server/server.js",
-		"/C/Code/map-routes/src/universal/redux/createStore.js",
 		"/C/Code/test/src/universal/redux/createStore.js",
 		"/C/Code/test/src/server/Html.js",
 		"/C/Code/test/src/universal/redux/reducers/index.js",
@@ -337,10 +345,8 @@
 		"/C/Code/map-routes/src/client/pages/UsersListPage.js",
 		"/C/Code/map-routes/src/client/App.js",
 		"/C/OpenServer/domains/news2/index.php",
-		"/C/OpenServer/domains/news2/include/controllers/front_admin.php",
 		"/C/OpenServer/domains/news2/template/news/journalistcount.html",
 		"/C/OpenServer/domains/news2/template/news/replacement.html",
-		"/C/OpenServer/domains/news2/template/news/userslist.html",
 		"/C/OpenServer/domains/news2/include/core/class.template.php",
 		"/C/Code/ssr/.babelirc",
 		"/C/OpenServer/domains/afisha/include/controllers/fronthelper.php",
@@ -362,13 +368,7 @@
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/account",
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/default_",
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/vn-dev.vash.ua.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/vn-s.vash.ua.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/default.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/ssl.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/static-location.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/password",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/.profile",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/.bashrc"
+		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/vn-s.vash.ua.conf"
 	],
 	"find":
 	{
@@ -388,6 +388,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"incrementCount",
+			"#map",
+			"Шановні відвідувачі,",
+			"Шановні відвідувачі, ",
+			"display:block; height:40px; width:100%;",
 			"var",
 			"112",
 			"FormItem",
@@ -510,12 +515,7 @@
 			"item:hover",
 			"section .item:hover",
 			"App",
-			"Router",
-			"checked",
-			"Стоврено",
-			"}));",
-			"onDelete",
-			"section"
+			"Router"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -533,16 +533,16 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "api/server.js",
+					"file": "src/universal/redux/createStore.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 671,
+						"buffer_size": 878,
 						"regions":
 						{
 							"bookmarks":
@@ -558,13 +558,14 @@
 						"selection":
 						[
 							[
-								291,
-								291
+								860,
+								860
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -575,11 +576,11 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/server/ssr.js",
+					"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1146,
+						"buffer_size": 2452,
 						"regions":
 						{
 							"bookmarks":
@@ -595,8 +596,8 @@
 						"selection":
 						[
 							[
-								1042,
-								1042
+								870,
+								886
 							]
 						],
 						"settings":
@@ -605,78 +606,66 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 114.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/universal/redux/actions/mapActions.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								125,
+								125
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/universal/redux/createStore.js",
+					"buffer": 3,
+					"file": "src/universal/redux/reducers/mapReducer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 837,
+						"buffer_size": 23,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
 						},
 						"selection":
 						[
 							[
-								359,
-								359
+								23,
+								23
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "api/routes.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								684,
-								674
-							]
-						],
-						"settings":
-						{
-							"auto_name": "routes.js",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -867,7 +856,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 272.0,
+	"side_bar_width": 281.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

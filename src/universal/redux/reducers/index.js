@@ -1,1 +1,1 @@
-export {default as counter} from '../../modules/counter/ducks/counter.js';
+export {default as mapReducer} from './mapReducer';
