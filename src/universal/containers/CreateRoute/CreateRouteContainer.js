@@ -2,14 +2,14 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import axios from 'axios';
+
 // Components
 import GoogleMap from 'universal/components/GoogleMap';
 import Sidebar from 'universal/components/Sidebar';
 import SaveRouteModal from 'universal/components/SaveRouteModal';
 // Actions
-import { changeDistanceAction } from 'universal/redux/actions/mapActions';
-
+import { changeDistanceAction, changeRouteItemsAction } from 'universal/redux/actions/mapActions';
+import { saveRouteAction } from 'universal/redux/actions/saveRouteActions';
 
 @connect(mapStateToProps, mapDispatchToProps)
 class CreateRouteContainer extends Component {
@@ -24,8 +24,9 @@ class CreateRouteContainer extends Component {
 		}
 	}
 
-	getRouteItems = (routeItems) => {
-		this.setState({routeItems: routeItems, reloadMap: true});
+	onChangeRouteItems = (routeItems) => {
+		this.props.changeRouteItems({routeItems: routeItems})
+		this.setState({reloadMap: true});
 	}
 
 	onChangeType = (type) => {
@@ -33,28 +34,16 @@ class CreateRouteContainer extends Component {
 	}
 
 	onChangeDistance = (distance) => {
-		// this.setState({distance: distance, reloadMap: true});
+		this.setState({reloadMap: true});
 		this.props.changeDistance(distance);
 	}
 
 	saveRouteToStorage = (routeName) => {
-		axios.post('/api/save-route', {
+		this.props.saveRoute({
 			routeName: routeName,
-			routeItems: JSON.stringify(this.state.routeItems),
-			distance: this.state.distance,
+			routeItems: JSON.stringify(this.props.routeItems),
+			distance: this.props.distance,
 			routeVisibleType: this.state.routeVisibleType
-		})
-		.then((response) => {
-			this.setState({
-				visibleSaveRouteModal: false,
-				reloadMap: false,
-				distance: 0,
-				reloadMap: true,
-				routeItems: []
-			});
-		})
-		.catch((error) => {
-			console.log(error);
 		});
 	}
 
@@ -67,18 +56,17 @@ class CreateRouteContainer extends Component {
 	}
 
 	render() {
-		// console.log(document.cookie);
 		return (
 			<Fragment>
 				<GoogleMap
 					onChangeDistance={this.onChangeDistance}
-					routeItems={this.state.routeItems}
+					routeItems={this.props.routeItems}
 					routeVisibleType={this.state.routeVisibleType}
 					reloadMap={this.state.reloadMap}
 				/>
 				<Sidebar
 					distance={this.props.distance}
-					getRouteItems={this.getRouteItems}
+					getRouteItems={this.onChangeRouteItems}
 					onChangeType={this.onChangeType}
 					showSaveRouteModal={this.showSaveRouteModal}
 				/>
@@ -95,14 +83,17 @@ class CreateRouteContainer extends Component {
 
 function mapStateToProps(state, props) {
 	return {
-		distance: state.mapReducer.distance
+		distance: state.distanceReducer.distance,
+		routeItems: state.routeItemsReducer.routeItems
 	};
 }
 
 
 function mapDispatchToProps(dispatch, props) {
 	return bindActionCreators({
-		changeDistance: changeDistanceAction
+		changeDistance: changeDistanceAction,
+		changeRouteItems: changeRouteItemsAction,
+		saveRoute: saveRouteAction
 	}, dispatch);
 }
 

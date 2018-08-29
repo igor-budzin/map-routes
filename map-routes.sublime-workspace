@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"dis",
+				"dispatch"
+			],
+			[
+				"d",
+				"distance"
+			],
+			[
 				"co",
 				"const"
 			],
@@ -156,37 +164,28 @@
 	"buffers":
 	[
 		{
-			"file": "src/universal/redux/createStore.js",
+			"file": "/C/OpenServer/domains/test3/skin/ua/feedback.html",
 			"settings":
 			{
-				"buffer_size": 878,
+				"buffer_size": 4326,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
+			"file": "/C/OpenServer/domains/test3/inc/other.func.php",
 			"settings":
 			{
-				"buffer_size": 2452,
+				"buffer_size": 47728,
 				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/universal/redux/actions/mapActions.js",
+			"file": "/C/OpenServer/domains/test3/skin/ua/vm.css",
 			"settings":
 			{
-				"buffer_size": 131,
-				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/universal/redux/reducers/mapReducer.js",
-			"settings":
-			{
-				"buffer_size": 23,
+				"buffer_size": 238839,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -232,15 +231,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Code/map-routes",
-		"/C/Code/map-routes/src",
-		"/C/Code/map-routes/src/universal",
-		"/C/Code/map-routes/src/universal/redux",
-		"/C/Code/map-routes/src/universal/redux/actions",
-		"/C/Code/map-routes/src/universal/redux/reducers"
+		"/C/OpenServer/domains/test3",
+		"/C/OpenServer/domains/test3/skin",
+		"/C/OpenServer/domains/test3/skin/ua"
 	],
 	"file_history":
 	[
+		"/C/OpenServer/domains/news/content/css/vm.css",
+		"/C/Code/map-routes/src/universal/redux/reducers/index.js",
+		"/C/Code/map-routes/src/universal/redux/createStore.js",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
+		"/C/Code/map-routes/src/universal/redux/actions/mapActions.js",
+		"/C/Code/map-routes/src/universal/redux/reducers/mapReducer.js",
 		"/C/Code/map-routes/src/universal/modules/counter/containers/Counter/CounterContainer.js",
 		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
 		"/C/Code/map-routes/src/universal/components/CreateRouteContainer.js",
@@ -250,7 +252,6 @@
 		"/C/OpenServer/domains/news2/template/news/rubricator.html",
 		"/C/Code/map-routes/api/server.js",
 		"/C/Code/map-routes/src/server/ssr.js",
-		"/C/Code/map-routes/src/universal/redux/createStore.js",
 		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
 		"/C/Code/map-routes/old-files2/shared/SavedRoutes.js",
 		"/C/Code/map-routes/api/routes.js",
@@ -260,7 +261,6 @@
 		"/C/OpenServer/domains/news2/include/controllers/front_static.php",
 		"/C/OpenServer/domains/news2/include/models/model_static.php",
 		"/C/Code/map-routes/src/universal/pages/HomePage.js",
-		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
 		"/C/Code/map-routes/src/universal/containers/Contact/ContactContainer.js",
 		"/C/Code/map-routes/src/universal/routes/Routes.js",
 		"/C/Code/map-routes/src/universal/routes/static.js",
@@ -301,7 +301,6 @@
 		"/C/Code/map-routes/webpack/webpack.config.dev.js",
 		"/C/Code/map-routes/src/universal/Routes.js",
 		"/C/Code/map-routes/src/server/server-old.js",
-		"/C/Code/map-routes/src/universal/redux/reducers/index.js",
 		"/C/Code/map-routes/src/helpers/createStore.js",
 		"/C/Code/map-routes/src/server/Routes.js",
 		"/C/Code/map-routes/src/client/Root.js",
@@ -365,10 +364,7 @@
 		"/C/OpenServer/domains/news/.gitignore",
 		"/C/OpenServer/domains/news/template/news/header.html",
 		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/s",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/account",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/default_",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/vn-dev.vash.ua.conf",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/vn-s.vash.ua.conf"
+		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/account"
 	],
 	"find":
 	{
@@ -388,6 +384,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"arr_select",
+			"feedback-select",
+			"important",
+			"feedback",
 			"incrementCount",
 			"#map",
 			"Шановні відвідувачі,",
@@ -511,11 +511,7 @@
 			"let",
 			"length",
 			"routeVisibleType",
-			"ref",
-			"item:hover",
-			"section .item:hover",
-			"App",
-			"Router"
+			"ref"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -533,16 +529,16 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/universal/redux/createStore.js",
+					"file": "/C/OpenServer/domains/test3/skin/ua/feedback.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 878,
+						"buffer_size": 4326,
 						"regions":
 						{
 							"bookmarks":
@@ -558,29 +554,28 @@
 						"selection":
 						[
 							[
-								860,
-								860
+								2148,
+								2148
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1238.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
+					"file": "/C/OpenServer/domains/test3/inc/other.func.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2452,
+						"buffer_size": 47728,
 						"regions":
 						{
 							"bookmarks":
@@ -596,76 +591,58 @@
 						"selection":
 						[
 							[
-								870,
-								886
+								28421,
+								28421
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/universal/redux/actions/mapActions.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 13816.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/universal/redux/reducers/mapReducer.js",
+					"buffer": 2,
+					"file": "/C/OpenServer/domains/test3/skin/ua/vm.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23,
+						"buffer_size": 238839,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
 							[
-								23,
-								23
+								238796,
+								238796
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 241375.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -720,6 +697,14 @@
 		"selected_items":
 		[
 			[
+				"vm.css",
+				"news\\content\\css\\vm.css"
+			],
+			[
+				"feedback",
+				"test3\\skin\\ua\\feedback.html"
+			],
+			[
 				"header",
 				"news\\template\\news\\header.html"
 			],
@@ -746,10 +731,6 @@
 			[
 				"other",
 				"vashmagazin\\inc\\other.func.php"
-			],
-			[
-				"feedback",
-				"vashmagazin\\skin\\ua\\feedback.html"
 			],
 			[
 				"coord",
@@ -822,10 +803,6 @@
 			[
 				"ogolist.html",
 				"skin\\ua\\ogolist.html"
-			],
-			[
-				"vm.css",
-				"skin\\ua\\vm.css"
 			]
 		],
 		"width": 0.0
@@ -855,7 +832,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 281.0,
 	"status_bar_visible": true,
 	"template_settings":

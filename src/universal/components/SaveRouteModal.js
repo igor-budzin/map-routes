@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Modal, Form, Input} from 'antd';
 
-// import 'antd/lib/modal/style';
-// import 'antd/lib/input/style';
-
 export default class SaveRouteModal extends React.Component {
 	constructor(props) {
 		super(props);
