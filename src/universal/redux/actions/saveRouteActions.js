@@ -20,6 +20,7 @@ export function requestSaveRoute() {
 }
 
 export function requestSaveRouteSuccess() {
+	console.log('requestSaveRouteSuccess action')
 	return {
 		type: REQUEST_SAVE_ROUTE_SUCCESS,
 		loading: false
@@ -38,8 +39,14 @@ export function saveRouteAction(data) {
 		dispatch(requestSaveRoute());
 		axiosInstance.post('save-route', data)
 		.then((response) => {
-			console.log('okkk')
-
+			if(response.data === 'OK') {
+				console.log('requestSaveRouteSuccess')
+				dispatch(requestSaveRouteSuccess());
+			}
+			else {
+				dispatch(requestSaveRouteError());
+			}
+			console.log(response)
 			// this.setState({
 			// 	visibleSaveRouteModal: false,
 			// 	reloadMap: false,
@@ -49,6 +56,7 @@ export function saveRouteAction(data) {
 			// });
 		})
 		.catch((error) => {
+			dispatch(requestSaveRouteError());
 			console.log(error);
 		});
 	}

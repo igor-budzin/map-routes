@@ -7,7 +7,7 @@ export default class SaveRouteModal extends React.Component {
 		super(props);
 
 		this.state = {
-			loading: false
+			
 		};
 	}
 
@@ -29,7 +29,7 @@ export default class SaveRouteModal extends React.Component {
 				visible={this.props.visibleSaveRouteModal}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}
-				confirmLoading={this.state.loading}
+				confirmLoading={this.props.saveModalLoading}
 				okText="Save"
 			>
 				<Form.Item

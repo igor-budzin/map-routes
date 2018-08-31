@@ -2,7 +2,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
 // Components
 import GoogleMap from 'universal/components/GoogleMap';
 import Sidebar from 'universal/components/Sidebar';
@@ -17,7 +16,6 @@ class CreateRouteContainer extends Component {
 		super(props);
 
 		this.state = {
-			routeItems: [],
 			visibleSaveRouteModal: false,
 			reloadMap: false,
 			routeVisibleType: localStorage.getItem('routeVisibleType') !== null ? localStorage.getItem('routeVisibleType') : 'route'
@@ -74,6 +72,7 @@ class CreateRouteContainer extends Component {
 					saveRouteToStorage={this.saveRouteToStorage}
 					visibleSaveRouteModal={this.state.visibleSaveRouteModal}
 					hideSaveRouteModal={this.hideSaveRouteModal}
+					saveModalLoading={this.props.saveModalLoading}
 				/>
 			</Fragment>
 		);
@@ -84,7 +83,8 @@ class CreateRouteContainer extends Component {
 function mapStateToProps(state, props) {
 	return {
 		distance: state.distanceReducer.distance,
-		routeItems: state.routeItemsReducer.routeItems
+		routeItems: state.routeItemsReducer.routeItems,
+		saveModalLoading: state.saveRouteReducer.saveModalLoading
 	};
 }
 

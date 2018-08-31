@@ -12,21 +12,27 @@ module.exports = (app, router, connection) => {
 			('${name}', '${points}', '${distance}', '${routeVisibleType}', '${createDate}')`;
 
 		connection.connect();
-		connection.query(query, (error, results, fields) => {
-			if (error) throw error;
-			res.send('ok');
-			connection.end();
-		});
+		try {
+			setTimeout(() => {
+				connection.query(query, (error, results, fields) => {
+					res.send('OK');
+				});
+			}, 1500);
+		}
+		catch (error) {
+			res.send('ERROR');
+		}
+		connection.end();
 	}); 
 
 	router.route('/get-routes').get((req, res) => {
 
 		const query = `SELECT * FROM routes`;
 
-		connection.connect();
+		// connection.connect();
 		connection.query(query, (error, results, fields) => {
 			if (error) throw error;
-			connection.end();
+			// connection.end();
 			res.json(results);
 		});
 	});

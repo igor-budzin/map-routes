@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"ro",
+				"route"
+			],
+			[
 				"dis",
 				"dispatch"
 			],
@@ -164,28 +172,28 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OpenServer/domains/test3/skin/ua/feedback.html",
+			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 			"settings":
 			{
-				"buffer_size": 4326,
+				"buffer_size": 2694,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OpenServer/domains/test3/inc/other.func.php",
+			"file": "src/universal/redux/reducers/saveRouteReducer.js",
 			"settings":
 			{
-				"buffer_size": 47728,
+				"buffer_size": 521,
 				"encoding": "Cyrillic (Windows 1251)",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OpenServer/domains/test3/skin/ua/vm.css",
+			"file": "src/universal/redux/actions/saveRouteActions.js",
 			"settings":
 			{
-				"buffer_size": 238839,
+				"buffer_size": 988,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -231,18 +239,29 @@
 	},
 	"expanded_folders":
 	[
-		"/C/OpenServer/domains/test3",
-		"/C/OpenServer/domains/test3/skin",
-		"/C/OpenServer/domains/test3/skin/ua"
+		"/C/Code/map-routes",
+		"/C/Code/map-routes/src",
+		"/C/Code/map-routes/src/universal",
+		"/C/Code/map-routes/src/universal/redux",
+		"/C/Code/map-routes/src/universal/redux/reducers"
 	],
 	"file_history":
 	[
-		"/C/OpenServer/domains/news/content/css/vm.css",
+		"/C/Code/map-routes/src/universal/components/SaveRouteModal.js",
 		"/C/Code/map-routes/src/universal/redux/reducers/index.js",
 		"/C/Code/map-routes/src/universal/redux/createStore.js",
-		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
+		"/C/Code/map-routes/src/universal/redux/reducers/routeItemsReducer.js",
+		"/C/Code/map-routes/src/universal/redux/consts.js",
+		"/C/Code/map-routes/src/universal/redux/reducers/distanceReducer.js",
 		"/C/Code/map-routes/src/universal/redux/actions/mapActions.js",
+		"/C/Code/map-routes/api/routes.js",
+		"/C/Code/map-routes/api/server.js",
 		"/C/Code/map-routes/src/universal/redux/reducers/mapReducer.js",
+		"/C/OpenServer/domains/test3/skin/ua/vm.css",
+		"/C/OpenServer/domains/test3/inc/other.func.php",
+		"/C/OpenServer/domains/test3/skin/ua/feedback.html",
+		"/C/OpenServer/domains/news/content/css/vm.css",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
 		"/C/Code/map-routes/src/universal/modules/counter/containers/Counter/CounterContainer.js",
 		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
 		"/C/Code/map-routes/src/universal/components/CreateRouteContainer.js",
@@ -250,11 +269,9 @@
 		"/C/OpenServer/domains/news2/include/controllers/front_admin.php",
 		"/C/OpenServer/domains/news2/template/news/userslist.html",
 		"/C/OpenServer/domains/news2/template/news/rubricator.html",
-		"/C/Code/map-routes/api/server.js",
 		"/C/Code/map-routes/src/server/ssr.js",
 		"/C/Code/map-routes/src/universal/containers/SavedRoutes/SavedRoutesContainer.js",
 		"/C/Code/map-routes/old-files2/shared/SavedRoutes.js",
-		"/C/Code/map-routes/api/routes.js",
 		"/C/Code/map-routes/.gitignore",
 		"/C/Code/map-routes/package.json",
 		"/C/OpenServer/domains/news2/template/news/broadcast.html",
@@ -357,14 +374,7 @@
 		"/C/OpenServer/domains/news2/include/controllers/front_widgets.php",
 		"/C/OpenServer/domains/news/include/controllers/front_widgets.php",
 		"/C/OpenServer/domains/news - копия (2)/template/news/widgets.html",
-		"/C/Code/fl-9/FE_9_2_homework_css-basics/FE_9_2_homework_css-basics/homework/css/style.css",
-		"/C/Code/fl-9/FE_9_2_homework_css-basics/FE_9_2_homework_css-basics/homework/index.html",
-		"/C/OpenServer/domains/news/include/config.php",
-		"/C/OpenServer/domains/news/template/news/add_news.html",
-		"/C/OpenServer/domains/news/.gitignore",
-		"/C/OpenServer/domains/news/template/news/header.html",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/s",
-		"/C/Users/Igor/AppData/Local/Temp/fz3temp-2/account"
+		"/C/Code/fl-9/FE_9_2_homework_css-basics/FE_9_2_homework_css-basics/homework/css/style.css"
 	],
 	"find":
 	{
@@ -384,6 +394,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}",
+			"routeItemsReducer",
+			"saveRouteToStorage",
+			"true",
+			"SUCCESS",
+			"onChangeDistance",
+			"state",
+			"distanceReducer",
+			"mapReducer",
+			"set",
+			"setHeader",
+			"header",
+			"response",
+			"getRouteItems",
 			"arr_select",
 			"feedback-select",
 			"important",
@@ -497,21 +521,7 @@
 			"webpackMiddleware",
 			"\t\t\t\t\t  {getFieldDecorator('userName', {\n\t\t\t\t\t\t\trules: [{ required: true, message: 'Please input your username!' }],\n\t\t\t\t\t\t  })(",
 			"FormItem",
-			"46px",
-			"40px",
-			"38px",
-			"Button",
-			"size=\"large\"",
-			"About",
-			"LiveReloadPlugin",
-			"points",
-			"div",
-			"routeName",
-			"localRouteItem",
-			"let",
-			"length",
-			"routeVisibleType",
-			"ref"
+			"46px"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -529,16 +539,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OpenServer/domains/test3/skin/ua/feedback.html",
+					"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4326,
+						"buffer_size": 2694,
 						"regions":
 						{
 							"bookmarks":
@@ -554,54 +564,45 @@
 						"selection":
 						[
 							[
-								2148,
-								2148
+								2623,
+								2623
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1238.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/OpenServer/domains/test3/inc/other.func.php",
+					"file": "src/universal/redux/reducers/saveRouteReducer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 47728,
+						"buffer_size": 521,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
 						},
 						"selection":
 						[
 							[
-								28421,
-								28421
+								478,
+								478
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 13816.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -609,40 +610,31 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/C/OpenServer/domains/test3/skin/ua/vm.css",
+					"file": "src/universal/redux/actions/saveRouteActions.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 238839,
+						"buffer_size": 988,
 						"regions":
 						{
-							"bookmarks":
-							{
-								"flags": 144,
-								"icon": "Packages/Theme - Default/common/bookmark.png",
-								"regions":
-								[
-								],
-								"scope": "string"
-							}
 						},
 						"selection":
 						[
 							[
-								238796,
-								238796
+								470,
+								470
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 241375.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -832,7 +824,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 281.0,
 	"status_bar_visible": true,
 	"template_settings":
