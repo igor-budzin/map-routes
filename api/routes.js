@@ -1,5 +1,9 @@
+const dbConnection = require('./dbConnection');
 
-module.exports = (app, router, connection) => {
+module.exports = (app, router) => {
+
+	const connection = dbConnection()();
+
 	router.route('/save-route').post((req, res) => {
 		const name = req.body.routeName;
 		const points = req.body.routeItems;
@@ -11,7 +15,6 @@ module.exports = (app, router, connection) => {
 			(name, points, distance, routeVisibleType, createDate) VALUES 
 			('${name}', '${points}', '${distance}', '${routeVisibleType}', '${createDate}')`;
 
-		connection.connect();
 		try {
 			setTimeout(() => {
 				connection.query(query, (error, results, fields) => {
@@ -22,8 +25,7 @@ module.exports = (app, router, connection) => {
 		catch (error) {
 			res.send('ERROR');
 		}
-		connection.end();
-	}); 
+	});
 
 	router.route('/get-routes').get((req, res) => {
 

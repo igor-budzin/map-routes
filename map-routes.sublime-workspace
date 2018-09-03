@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"border-r",
+				"border-radius\tproperty"
+			],
+			[
 				"fun",
 				"function"
 			],
@@ -116,10 +120,6 @@
 				"border-bottom"
 			],
 			[
-				"border-r",
-				"border-right"
-			],
-			[
 				"box",
 				"box-sizing\tproperty"
 			],
@@ -175,7 +175,16 @@
 			"file": "src/universal/containers/CreateRoute/CreateRouteContainer.js",
 			"settings":
 			{
-				"buffer_size": 2694,
+				"buffer_size": 2787,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/universal/components/SaveRouteModal.js",
+			"settings":
+			{
+				"buffer_size": 1046,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -184,7 +193,7 @@
 			"file": "src/universal/redux/reducers/saveRouteReducer.js",
 			"settings":
 			{
-				"buffer_size": 521,
+				"buffer_size": 642,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -193,7 +202,25 @@
 			"file": "src/universal/redux/actions/saveRouteActions.js",
 			"settings":
 			{
-				"buffer_size": 988,
+				"buffer_size": 1249,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/routes.js",
+			"settings":
+			{
+				"buffer_size": 1061,
+				"encoding": "Cyrillic (Windows 1251)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/server.js",
+			"settings":
+			{
+				"buffer_size": 718,
 				"encoding": "Cyrillic (Windows 1251)",
 				"line_ending": "Windows"
 			}
@@ -240,13 +267,25 @@
 	"expanded_folders":
 	[
 		"/C/Code/map-routes",
+		"/C/Code/map-routes/api",
 		"/C/Code/map-routes/src",
 		"/C/Code/map-routes/src/universal",
+		"/C/Code/map-routes/src/universal/components",
+		"/C/Code/map-routes/src/universal/containers",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute",
 		"/C/Code/map-routes/src/universal/redux",
+		"/C/Code/map-routes/src/universal/redux/actions",
 		"/C/Code/map-routes/src/universal/redux/reducers"
 	],
 	"file_history":
 	[
+		"/C/OpenServer/domains/test3/inc/other.func.php",
+		"/C/OpenServer/domains/test3/skin/ua/feedback.html",
+		"/C/OpenServer/domains/test3/skin/ua/vm.css",
+		"/C/OpenServer/domains/test3/skin/ua/coordbody.html",
+		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
+		"/C/Code/map-routes/src/universal/redux/reducers/saveRouteReducer.js",
+		"/C/Code/map-routes/src/universal/redux/actions/saveRouteActions.js",
 		"/C/Code/map-routes/src/universal/components/SaveRouteModal.js",
 		"/C/Code/map-routes/src/universal/redux/reducers/index.js",
 		"/C/Code/map-routes/src/universal/redux/createStore.js",
@@ -257,11 +296,7 @@
 		"/C/Code/map-routes/api/routes.js",
 		"/C/Code/map-routes/api/server.js",
 		"/C/Code/map-routes/src/universal/redux/reducers/mapReducer.js",
-		"/C/OpenServer/domains/test3/skin/ua/vm.css",
-		"/C/OpenServer/domains/test3/inc/other.func.php",
-		"/C/OpenServer/domains/test3/skin/ua/feedback.html",
 		"/C/OpenServer/domains/news/content/css/vm.css",
-		"/C/Code/map-routes/src/universal/containers/CreateRoute/CreateRouteContainer.js",
 		"/C/Code/map-routes/src/universal/modules/counter/containers/Counter/CounterContainer.js",
 		"/C/Code/map-routes/src/universal/assets/styles/styles.scss",
 		"/C/Code/map-routes/src/universal/components/CreateRouteContainer.js",
@@ -371,10 +406,7 @@
 		"/C/OpenServer/domains/afisha/.gitignore",
 		"/C/OpenServer/domains/afisha/include/controllers/front_widgets.php",
 		"/C/Users/Igor/Desktop/widgets.html",
-		"/C/OpenServer/domains/news2/include/controllers/front_widgets.php",
-		"/C/OpenServer/domains/news/include/controllers/front_widgets.php",
-		"/C/OpenServer/domains/news - копия (2)/template/news/widgets.html",
-		"/C/Code/fl-9/FE_9_2_homework_css-basics/FE_9_2_homework_css-basics/homework/css/style.css"
+		"/C/OpenServer/domains/news2/include/controllers/front_widgets.php"
 	],
 	"find":
 	{
@@ -394,6 +426,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"672-83-91",
+			"672-83-9",
+			"arr_select",
 			"}",
 			"routeItemsReducer",
 			"saveRouteToStorage",
@@ -518,10 +553,7 @@
 			"Router",
 			"from",
 			"import",
-			"webpackMiddleware",
-			"\t\t\t\t\t  {getFieldDecorator('userName', {\n\t\t\t\t\t\t\trules: [{ required: true, message: 'Please input your username!' }],\n\t\t\t\t\t\t  })(",
-			"FormItem",
-			"46px"
+			"webpackMiddleware"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -539,7 +571,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -548,7 +580,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2694,
+						"buffer_size": 2787,
 						"regions":
 						{
 							"bookmarks":
@@ -564,8 +596,84 @@
 						"selection":
 						[
 							[
-								2623,
-								2623
+								2278,
+								2294
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 969.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/universal/components/SaveRouteModal.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								224,
+								224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/universal/redux/reducers/saveRouteReducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 642,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								393,
+								393
 							]
 						],
 						"settings":
@@ -581,60 +689,116 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/universal/redux/reducers/saveRouteReducer.js",
+					"buffer": 3,
+					"file": "src/universal/redux/actions/saveRouteActions.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 521,
+						"buffer_size": 1249,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
 							[
-								478,
-								478
+								1212,
+								1212
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 513.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/universal/redux/actions/saveRouteActions.js",
+					"buffer": 4,
+					"file": "api/routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 988,
+						"buffer_size": 1061,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
 						},
 						"selection":
 						[
 							[
-								470,
-								470
+								307,
+								307
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 342.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "api/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 718,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "Packages/Theme - Default/common/bookmark.png",
+								"regions":
+								[
+								],
+								"scope": "string"
+							}
+						},
+						"selection":
+						[
+							[
+								619,
+								619
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -689,8 +853,16 @@
 		"selected_items":
 		[
 			[
+				"coord",
+				"test3\\skin\\ua\\coordbody.html"
+			],
+			[
+				"other",
+				"test3\\inc\\other.func.php"
+			],
+			[
 				"vm.css",
-				"news\\content\\css\\vm.css"
+				"test3\\skin\\ua\\vm.css"
 			],
 			[
 				"feedback",
@@ -719,14 +891,6 @@
 			[
 				"conf",
 				"test3\\conf\\conf.php"
-			],
-			[
-				"other",
-				"vashmagazin\\inc\\other.func.php"
-			],
-			[
-				"coord",
-				"test3\\skin\\ua\\coordbody.html"
 			],
 			[
 				"order",

@@ -9,7 +9,6 @@ const initialState = {
 };
 
 export default function saveRouteReducer(state = initialState, action) {
-	console.log('saveRouteReducer')
 	const status = action.loading;
 	switch(action.type) {
 		case REQUEST_SAVE_ROUTE:
@@ -17,7 +16,6 @@ export default function saveRouteReducer(state = initialState, action) {
 				saveModalLoading: status
 			};
 		case REQUEST_SAVE_ROUTE_SUCCESS:
-		console.log('REQUEST_SAVE_ROUTE_SUCCESS reducer')
 			return {
 				saveModalLoading: status
 			};

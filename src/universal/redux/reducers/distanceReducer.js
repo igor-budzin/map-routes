@@ -1,11 +1,10 @@
 import { CHANGE_DISTANCE } from '../consts';
 
 const initialState = {
-	distance: 0,
-	reloadMap: true
+	distance: 0
 };
 
-export default function distanceReducer(state = {}, action) {
+export default function distanceReducer(state = initialState, action) {
 	switch(action.type) {
 		case CHANGE_DISTANCE:
 			const distance = action.distance;

@@ -20,7 +20,6 @@ export function requestSaveRoute() {
 }
 
 export function requestSaveRouteSuccess() {
-	console.log('requestSaveRouteSuccess action')
 	return {
 		type: REQUEST_SAVE_ROUTE_SUCCESS,
 		loading: false
@@ -40,13 +39,11 @@ export function saveRouteAction(data) {
 		axiosInstance.post('save-route', data)
 		.then((response) => {
 			if(response.data === 'OK') {
-				console.log('requestSaveRouteSuccess')
 				dispatch(requestSaveRouteSuccess());
 			}
 			else {
 				dispatch(requestSaveRouteError());
 			}
-			console.log(response)
 			// this.setState({
 			// 	visibleSaveRouteModal: false,
 			// 	reloadMap: false,

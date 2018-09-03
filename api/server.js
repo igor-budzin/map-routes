@@ -20,14 +20,7 @@ router.get('/', function(req, res) {
 
 app.use('/api', router);
 
-const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: 'map-routes'
-});
-
-routes(app, router, connection);
+routes(app, router);
 
 app.listen(port);
 console.log('Magic happens on port ' + port);
