@@ -9,6 +9,7 @@ import SaveRouteModal from 'universal/components/SaveRouteModal';
 // Actions
 import { changeDistanceAction, changeRouteItemsAction } from 'universal/redux/actions/mapActions';
 import { saveRouteAction } from 'universal/redux/actions/saveRouteActions';
+import { openSaveRouteModalAction, closeSaveRouteModalAction } from 'universal/redux/actions/modalActions';
 
 @connect(mapStateToProps, mapDispatchToProps)
 class CreateRouteContainer extends Component {
@@ -16,7 +17,6 @@ class CreateRouteContainer extends Component {
 		super(props);
 
 		this.state = {
-			visibleSaveRouteModal: false,
 			reloadMap: false,
 			routeVisibleType: localStorage.getItem('routeVisibleType') !== null ? localStorage.getItem('routeVisibleType') : 'route'
 		}
@@ -46,11 +46,13 @@ class CreateRouteContainer extends Component {
 	}
 
 	showSaveRouteModal = () => {
-		this.setState({visibleSaveRouteModal: true, reloadMap: false});
+		this.props.openSaveRouteModal();
+		this.setState({reloadMap: false});
 	}
 
 	hideSaveRouteModal = () => {
-		this.setState({visibleSaveRouteModal: false, reloadMap: false});
+		this.props.closeSaveRouteModal();
+		this.setState({reloadMap: false});
 	}
 
 	render() {
@@ -70,7 +72,7 @@ class CreateRouteContainer extends Component {
 				/>
 				<SaveRouteModal
 					saveRouteToStorage={this.saveRouteToStorage}
-					visibleSaveRouteModal={this.state.visibleSaveRouteModal}
+					visibleSaveRouteModal={this.props.visibleSaveRouteModal}
 					hideSaveRouteModal={this.hideSaveRouteModal}
 					saveModalLoading={this.props.saveModalLoading}
 				/>
@@ -79,12 +81,12 @@ class CreateRouteContainer extends Component {
 	}
 }
 
-
 function mapStateToProps(state, props) {
 	return {
 		distance: state.distanceReducer.distance,
 		routeItems: state.routeItemsReducer.routeItems,
-		saveModalLoading: state.saveRouteReducer.saveModalLoading
+		saveModalLoading: state.saveRouteReducer.saveModalLoading,
+		visibleSaveRouteModal: state.saveRouteModalReducer.visibleSaveRouteModal
 	};
 }
 
@@ -93,7 +95,9 @@ function mapDispatchToProps(dispatch, props) {
 	return bindActionCreators({
 		changeDistance: changeDistanceAction,
 		changeRouteItems: changeRouteItemsAction,
-		saveRoute: saveRouteAction
+		saveRoute: saveRouteAction,
+		openSaveRouteModal: openSaveRouteModalAction,
+		closeSaveRouteModal: closeSaveRouteModalAction
 	}, dispatch);
 }
 

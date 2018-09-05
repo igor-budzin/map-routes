@@ -2,8 +2,6 @@ const dbConnection = require('./dbConnection');
 
 module.exports = (app, router) => {
 
-	const connection = dbConnection()();
-
 	router.route('/save-route').post((req, res) => {
 		const name = req.body.routeName;
 		const points = req.body.routeItems;
@@ -17,8 +15,11 @@ module.exports = (app, router) => {
 
 		try {
 			setTimeout(() => {
+				const connection = dbConnection()();
 				connection.query(query, (error, results, fields) => {
+					if (error) throw error;
 					res.send('OK');
+					connection.destroy();
 				});
 			}, 1500);
 		}
@@ -28,14 +29,13 @@ module.exports = (app, router) => {
 	});
 
 	router.route('/get-routes').get((req, res) => {
-
+		const connection = dbConnection()();
 		const query = `SELECT * FROM routes`;
 
-		// connection.connect();
 		connection.query(query, (error, results, fields) => {
 			if (error) throw error;
-			// connection.end();
 			res.json(results);
+			connection.destroy();
 		});
 	});
 

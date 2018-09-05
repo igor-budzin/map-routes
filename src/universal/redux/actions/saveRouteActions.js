@@ -6,6 +6,8 @@ import {
 	REQUEST_SAVE_ROUTE_ERROR
 } from '../consts';
 
+import { closeSaveRouteModalAction } from 'universal/redux/actions/modalActions';
+
 const axiosInstance = axios.create({
 	baseURL: 'http://localhost:8080/api/',
 	headers: {'Access-Control-Allow-Origin': '*'}
@@ -14,28 +16,26 @@ const axiosInstance = axios.create({
 
 export function requestSaveRoute() {
 	return {
-		type: REQUEST_SAVE_ROUTE,
-		loading: true
+		type: REQUEST_SAVE_ROUTE
 	}
 }
 
 export function requestSaveRouteSuccess() {
 	return {
-		type: REQUEST_SAVE_ROUTE_SUCCESS,
-		loading: false
+		type: REQUEST_SAVE_ROUTE_SUCCESS
 	}
 }
 
 export function requestSaveRouteError() {
 	return {
-		type: REQUEST_SAVE_ROUTE_ERROR,
-		loading: false
+		type: REQUEST_SAVE_ROUTE_ERROR
 	}
 }
 
 export function saveRouteAction(data) {
 	return (dispatch) => {
 		dispatch(requestSaveRoute());
+
 		axiosInstance.post('save-route', data)
 		.then((response) => {
 			if(response.data === 'OK') {
@@ -44,16 +44,11 @@ export function saveRouteAction(data) {
 			else {
 				dispatch(requestSaveRouteError());
 			}
-			// this.setState({
-			// 	visibleSaveRouteModal: false,
-			// 	reloadMap: false,
-			// 	distance: 0,
-			// 	reloadMap: true,
-			// 	routeItems: []
-			// });
+			dispatch(closeSaveRouteModalAction());
 		})
 		.catch((error) => {
 			dispatch(requestSaveRouteError());
+			dispatch(closeSaveRouteModalAction());
 			console.log(error);
 		});
 	}

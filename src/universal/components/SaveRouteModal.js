@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Modal, Form, Input} from 'antd';
+import { Modal, Form, Input } from 'antd';
 
 export default class SaveRouteModal extends React.Component {
 	constructor(props) {
@@ -17,7 +17,6 @@ export default class SaveRouteModal extends React.Component {
 
 	handleOk = () => {
 		if(this.input.value) {
-			this.setState({loading: true});
 			this.props.saveRouteToStorage(this.input.value);
 		}
 	}

@@ -14,6 +14,7 @@ module.exports = () => {
 		connection = mysql.createConnection(db_config);
 
 		connection.connect(function(err) {
+			console.log('DB connected');
 			if(err) {
 				console.log('error when connecting to db:', err);
 				setTimeout(handleConnect, 2000);
