@@ -1,7 +1,4 @@
-import React from 'react';
-import {Button} from 'antd';
-
-// import 'antd/lib/button/style';
+import React, { Component } from 'react';
 
 const List = () => {
 	const routes = null;
@@ -22,38 +19,39 @@ const List = () => {
 							</span>
 						</td>
 					</tr>
-				)
+				);
 			})
-		)
+		);
 	}
 	else return null;
-	
 }
 
-export default class SavedRoutes extends React.Component {
+class SavedRoutesList extends Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+
+		};
 	}
 
 	render() {
 		return (
-			<div className="page-container">
-				<h2>Saved routes</h2>
-
-				<table className="saved-routes-list">
-					<thead>
-						<tr>
-							<td>Route Name</td>
-							<td>Route Points</td>
-							<td>Distance</td>
-							<td></td>
-						</tr>
-					</thead>
-					<tbody>
-						<List />
-					</tbody>
-				</table>
-			</div>
+			<table className="saved-routes-list">
+				<thead>
+					<tr>
+						<td>Route Name</td>
+						<td>Route Points</td>
+						<td>Distance</td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<List />
+				</tbody>
+			</table>
 		);
 	}
 }
+
+export default SavedRoutesList;
