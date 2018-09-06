@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
 
-const List = () => {
-	const routes = null;
-	console.log(routes);
-	if(routes !== null) {
-		return (
-			routes.map((item, index) => {
-				let point = item.routeItems.map((route) => route.main_text);
-				return (
-					<tr className="route" key={item.routeName + index}>
-						<td>{item.routeName}</td>
-						<td>{point.join(', ')}</td>
-						<td>{`${item.distance} km`}</td>
-						<td>
-							<span className="btn-wrap">
-								<Button type="primary">Edit</Button>
-								<Button type="danger">Delete</Button>
-							</span>
-						</td>
-					</tr>
-				);
-			})
-		);
-	}
-	else return null;
+function List(data) {
+	// const routes = data;
+	console.log('List', data.routes.length)
+	// const routes = data.routes;
+	// if(routes !== null && routes.length > 0) {
+	// 	const html = routes.map((item, index) => {
+	// 		let point = item.routeItems.map((route) => route.main_text);
+	// 		return (
+	// 			<tr className="route" key={item.routeName + index}>
+	// 				<td>{item.routeName}</td>
+	// 				<td>{point.join(', ')}</td>
+	// 				<td>{`${item.distance} km`}</td>
+	// 				<td>
+	// 					<span className="btn-wrap">
+	// 						<Button type="primary">Edit</Button>
+	// 						<Button type="danger">Delete</Button>
+	// 					</span>
+	// 				</td>
+	// 			</tr>
+	// 		);
+	// 	});
+	// 	console.log('html', html)
+	// 	return html;
+	// }
+	// else return null;
+	return <h1></h1>
 }
 
 class SavedRoutesList extends Component {
@@ -47,7 +49,7 @@ class SavedRoutesList extends Component {
 					</tr>
 				</thead>
 				<tbody>
-					<List />
+					<List routes={this.props.routes} />
 				</tbody>
 			</table>
 		);
