@@ -13,7 +13,7 @@ export default function getRoutesReducer(state = initialState, action) {
 	switch(action.type) {
 		case REQUEST_GET_ROUTES:
 			return {
-				routes
+				routes: []
 			};
 		case REQUEST_GET_ROUTES_SUCCESS:
 			// console.log('REQUEST_GET_ROUTES_SUCCESS', action, routes)

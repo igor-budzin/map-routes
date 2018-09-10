@@ -1,13 +1,12 @@
 // Libraries
-import React, {Component, PropTypes} from 'react';
-import {StaticRouter} from 'react-router';
-import {renderToString} from 'react-dom/server';
-
+import React, { Component, PropTypes } from 'react';
+import { StaticRouter } from 'react-router';
+import { renderToString } from 'react-dom/server';
 // Redux
 import { Provider } from 'react-redux';
 
 class Html extends Component {
-	render () {
+	render() {
 		const PROD = process.env.NODE_ENV === 'production';
 
 		const { title, store, assets, url, context } = this.props;
@@ -30,7 +29,7 @@ class Html extends Component {
 		return (
 			<html>
 			<head>
-				<meta charSet="utf-8"/>
+				<meta charset="utf-8"/>
 				<title>{title}</title>
 
 				{PROD && <link rel="stylesheet" href="/static/prerender.css" type="text/css" />}

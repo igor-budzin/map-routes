@@ -1,7 +1,7 @@
 import React from 'react';
 
 const mapStyle = require("./mapStyle.json");
-// const iconMarker = require('./assets/img/marker.svg');
+const iconMarker = require('../assets/img/marker.svg');
 
 export default class GoogleMap extends React.Component {
 	constructor(props) {
