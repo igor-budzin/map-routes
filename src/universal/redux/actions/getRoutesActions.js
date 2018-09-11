@@ -38,7 +38,6 @@ export function getRoutesAction() {
 
 		axiosInstance.get('get-routes')
 		.then((response) => {
-			console.log(response);
 			if(response.status === 200) {
 				dispatch(requestGetRoutesSuccess(response.data));
 			}

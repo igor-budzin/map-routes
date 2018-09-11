@@ -1,27 +1,20 @@
-import React from 'react';
-import {Button, Icon, Form, Checkbox, Input} from 'antd';
+// Libraries
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Form, Input, Button, Checkbox, Icon } from 'antd';
 import axios from 'axios';
 
-require ('antd/lib/icon/style');
-require ('antd/lib/button/style');
-require ('antd/lib/checkbox/style');
-require ('antd/lib/input/style');
-
-export default class Auth extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
+@connect(mapStateToProps, mapDispatchToProps)
+class AuthContainer extends Component {
 	handleGoogleAuth = () => {
-		// window.location = 'http://localhost:3000/auth/google/login';
-		axios.get('api/auth/google/login')
-		.then((responce) => {
-			console.log(responce);
-		});
+		window.location = 'http://localhost:8080/api/login/facebook';
+		// axios.get('api/login/facebook')
+		// .then((responce) => {
+		// 	console.log(responce);
+		// })
 	}
 
 	render() {
-		
 		return (
 			<div className="auth-block">
 				<Form onSubmit={this.handleSubmit} className="login-form">
@@ -53,3 +46,13 @@ export default class Auth extends React.Component {
 		);
 	}
 }
+
+function mapStateToProps(state, props) {
+	return {};
+}
+
+function mapDispatchToProps(dispatch, props) {
+	return {};
+}
+
+export default AuthContainer;

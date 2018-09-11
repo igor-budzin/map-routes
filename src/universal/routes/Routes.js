@@ -1,9 +1,8 @@
 // Libraries
 import React, { Component, Fragment } from  'react';
-import {Route, Redirect} from 'react-router';
+import { Route, Redirect, Switch } from 'react-router';
 
 import styles from 'universal/assets/styles/styles.scss';
-
 
 // Routes
 // For Development only
@@ -18,11 +17,14 @@ class Routes extends Component {
 
 		return (
 			<Fragment>
-				{/*<Redirect from='/' to='/create'/>*/}
-				<Route exact location={location} path='/saved' component={RouteMap.SavedRoutesPage} />
-				<Route exact location={location} path='/about' component={RouteMap.AboutPage} />
-				<Route exact location={location} path='/create' component={RouteMap.CreateRoutePage} />
-				<Route exact location={location} path='/contact' component={RouteMap.ContactPage} />
+				<Switch>
+					<Route exact location={location} path='/saved' component={RouteMap.SavedRoutesPage} />
+					<Route exact location={location} path='/about' component={RouteMap.AboutPage} />
+					<Route exact location={location} path='/create' component={RouteMap.CreateRoutePage} />
+					<Route exact location={location} path='/contact' component={RouteMap.ContactPage} />
+					<Route exact location={location} path='/auth' component={RouteMap.AuthPage} />
+					<Route component={RouteMap.NotFoundPage} />
+				</Switch>
 			</Fragment>
 		);
 	}

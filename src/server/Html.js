@@ -29,7 +29,7 @@ class Html extends Component {
 		return (
 			<html>
 			<head>
-				<meta charset="utf-8"/>
+				<meta charSet="utf-8"/>
 				<title>{title}</title>
 
 				{PROD && <link rel="stylesheet" href="/static/prerender.css" type="text/css" />}

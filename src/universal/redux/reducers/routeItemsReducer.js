@@ -1,6 +1,10 @@
 import { CHANGE_ROUTE_ITEMS } from '../consts';
 
-export default function routeItemsReducer(state = {}, action) {
+const initialState = {
+	routeItems: []
+}
+
+export default function routeItemsReducer(state = initialState, action) {
 	switch(action.type) {
 		case CHANGE_ROUTE_ITEMS:
 			const route = action.route;
