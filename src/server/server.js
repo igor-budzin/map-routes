@@ -1,7 +1,11 @@
-import http    from 'http';
+import fs from 'fs';
+import https from 'https';
+const privateKey  = fs.readFileSync('api/key.pem', 'utf8');
+const certificate = fs.readFileSync('api/cert.pem', 'utf8');
 import express from 'express';
 import colors  from 'colors';
 import path    from 'path';
+const credentials = {key: privateKey, cert: certificate, passphrase: 'local'};
 
 // Server Side Rendering
 import { renderPage, renderDevPage } from './ssr.js';
@@ -41,8 +45,9 @@ app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 });
 
-const server = http.createServer(app);
 
-server.listen(3000, () => {
+const httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(3000, () => {
 	 console.log(`${'Server listening:'.yellow} ${'http://localhost:3000'.red}`);
  });

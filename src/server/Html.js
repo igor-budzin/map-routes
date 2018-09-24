@@ -36,7 +36,7 @@ class Html extends Component {
 
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.8.2/antd.min.css"/>
 				<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700&amp;subset=cyrillic" rel="stylesheet" />
-				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAI7aTEA9i1tub7dc87buwJqSsM-sLb_ns&libraries=places"></script>
+				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzVcEECbis1X2HeVMHWf2ma8R6RZvQqo&libraries=places"></script>
 
 			</head>
 			<body>

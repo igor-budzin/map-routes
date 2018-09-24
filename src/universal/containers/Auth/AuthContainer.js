@@ -7,7 +7,7 @@ import axios from 'axios';
 @connect(mapStateToProps, mapDispatchToProps)
 class AuthContainer extends Component {
 	handleGoogleAuth = () => {
-		window.location = 'http://localhost:8080/api/login/facebook';
+		window.location = 'https://localhost:8080/api/login/facebook';
 		// axios.get('api/login/facebook')
 		// .then((responce) => {
 		// 	console.log(responce);
